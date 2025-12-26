@@ -6,7 +6,8 @@
       "Bash(mv:*)",
       "Bash(docker logs:*)",
       "WebFetch(domain:*)",
-      "Bash(docker exec:*)"
+      "Bash(docker exec:*)",
+      "WebFetch(domain:opportunisticoutdoors.club)"
     ]
   }
 }
