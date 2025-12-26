@@ -197,6 +197,66 @@
           {"label": "Four Waterfalls Walk", "url": "https://www.breconbeacons.org/things-to-do/walking/our-favourite-walks/four-waterfalls-walk"},
           {"label": "Sgwd yr Eira waterfall", "url": "https://en.wikipedia.org/wiki/Sgwd_yr_Eira"}
         ]
+      },
+      {
+        "slug": "pen-y-fan",
+        "title": "Pen-y-Fan",
+        "date": "2026-02-15",
+        "times": "8am - 4:30pm",
+        "duration": "Full day",
+        "spotsFilled": "0",
+        "spotsTotal": "11",
+        "fee": "£12",
+        "difficulty": "Moderate-challenging",
+        "meeting": "Cardiff Central station, by the taxi rank, 8am",
+        "transport": "Mini-bus to Storey Arms car park (50 mins each way). Back in Cardiff by 4:30pm.",
+        "footwear": "Walking boots with good ankle support. Consider microspikes if icy.",
+        "description": "We take the mini-bus up to Storey Arms, the traditional starting point for Pen-y-Fan. The path climbs steadily from the car park, steep in places, with the summit at 886m (the highest point in southern Britain). On a clear day you can see the Bristol Channel, the Black Mountains, and across to the Preseli Hills in Pembrokeshire. From the top we head west to Corn Du, then drop down toward the Upper Neuadd Reservoir before looping back along an old drovers' road. In winter the ground can be frozen or boggy, and the summit is often in cloud or wind. We go at the group's pace and turn back if conditions are poor.",
+        "routeDescription": "Circular via Pen-y-Fan (886m) and Corn Du. 11km, 4-5 hours. Steep ascent from Storey Arms, exposed summit ridge, reservoir return.",
+        "itinerary": [
+          {"time": "08:00", "description": "Meet at Cardiff Central station, by the taxi rank"},
+          {"time": "08:15", "description": "Depart by mini-bus to Storey Arms (50 mins)"},
+          {"time": "09:00", "description": "Arrive Storey Arms, kit check and set off"},
+          {"time": "10:30", "description": "Summit Pen-y-Fan (886m)"},
+          {"time": "11:00", "description": "Continue to Corn Du, then descend toward reservoir"},
+          {"time": "12:30", "description": "Lunch break by Upper Neuadd Reservoir"},
+          {"time": "13:30", "description": "Return via drovers' road to Storey Arms"},
+          {"time": "15:00", "description": "Back at mini-bus, depart for Cardiff"},
+          {"time": "16:30", "description": "Return to Cardiff Central"}
+        ],
+        "bring": [
+          "Packed lunch and snacks (nothing available on route)",
+          "At least 1.5 litres of water",
+          "Waterproof jacket and trousers",
+          "Warm layers (fleece, hat, gloves)",
+          "Spare warm layer in case of cold",
+          "Microspikes if you have them (ice possible)"
+        ],
+        "faq": [
+          {"question": "What if there's snow or ice?", "answer": "We'll assess conditions on the day. If there's significant ice on the path, microspikes help. If it's unsafe, we'll shorten the route or reschedule."},
+          {"question": "How cold will it be?", "answer": "At 886m in February, expect temperatures around freezing or below, with wind chill making it feel colder. Dress in layers and bring a hat and gloves."},
+          {"question": "Is this harder than the other trips?", "answer": "Yes. The ascent is steep, the summit is exposed, and winter conditions add difficulty. You should be comfortable walking uphill for an hour or more."},
+          {"question": "Can we stop if the weather turns?", "answer": "Absolutely. We can turn back at any point. The summit ridge is exposed, so if visibility drops or wind picks up, we'll descend."}
+        ],
+        "startLat": 51.8832,
+        "startLng": -3.4378,
+        "startLabel": "Start: Storey Arms",
+        "endLat": 51.8838,
+        "endLng": -3.4365,
+        "endLabel": "End: Pen-y-Fan Summit",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Pen-y-Fan+1",
+          "https://placehold.co/300x300/22c55e/white?text=Pen-y-Fan+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Pen-y-Fan+3",
+          "https://placehold.co/300x300/ef4444/white?text=Pen-y-Fan+4",
+          "https://placehold.co/300x300/8b5cf6/white?text=Pen-y-Fan+5",
+          "https://placehold.co/600x300/06b6d4/white?text=Pen-y-Fan+6",
+          "https://placehold.co/300x300/ec4899/white?text=Pen-y-Fan+7"
+        ],
+        "links": [
+          {"label": "Pen-y-Fan on Wikipedia", "url": "https://en.wikipedia.org/wiki/Pen_y_Fan"},
+          {"label": "Brecon Beacons National Park", "url": "https://www.breconbeacons.org/"}
+        ]
       }
     ]
   },

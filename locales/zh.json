@@ -173,6 +173,58 @@
           {"label": "四瀑布步道", "url": "https://www.breconbeacons.org/things-to-do/walking/our-favourite-walks/four-waterfalls-walk"},
           {"label": "Sgwd yr Eira 瀑布 (维基百科)", "url": "https://en.wikipedia.org/wiki/Sgwd_yr_Eira"}
         ]
+      },
+      {
+        "slug": "pen-y-fan",
+        "title": "Pen-y-Fan",
+        "duration": "全天",
+        "fee": "£12",
+        "difficulty": "中等偏难",
+        "meeting": "Cardiff Central火车站，出租车站牌处，8点",
+        "transport": "小巴前往Storey Arms停车场（单程50分钟）。下午4:30返回卡迪夫。",
+        "footwear": "有良好脚踝支撑的登山鞋。如有结冰可能需要冰爪。",
+        "description": "我们乘小巴前往Storey Arms，这是攀登Pen-y-Fan的传统起点。从停车场开始，路径稳步上升，部分路段较陡，山顶海拔886米，是英国南部最高点。晴天可以看到布里斯托尔海峡、黑山山脉，以及远处彭布罗克郡的普雷塞利山。从山顶我们向西前往Corn Du，然后下降至Upper Neuadd水库，沿古老的赶牛道返回。冬季地面可能结冰或泥泞，山顶常有云雾和大风。我们按团队节奏行进，如果条件恶劣会折返。",
+        "routeDescription": "环形路线，经过Pen-y-Fan（886米）和Corn Du。11公里，4-5小时。从Storey Arms陡峭攀升，山脊暴露，经水库返回。",
+        "itinerary": [
+          {"time": "08:00", "description": "Cardiff Central火车站集合"},
+          {"time": "08:15", "description": "乘小巴前往Storey Arms（50分钟）"},
+          {"time": "09:00", "description": "到达Storey Arms，检查装备后出发"},
+          {"time": "10:30", "description": "登顶Pen-y-Fan（886米）"},
+          {"time": "11:00", "description": "继续前往Corn Du，然后下降至水库方向"},
+          {"time": "12:30", "description": "在Upper Neuadd水库旁午餐"},
+          {"time": "13:30", "description": "沿赶牛道返回Storey Arms"},
+          {"time": "15:00", "description": "返回小巴，出发回卡迪夫"},
+          {"time": "16:30", "description": "返回Cardiff Central"}
+        ],
+        "bring": [
+          "午餐和零食（沿途没有补给）",
+          "至少1.5升水",
+          "防水外套和裤子",
+          "保暖层（抓绒、帽子、手套）",
+          "备用保暖衣物",
+          "冰爪（如有，可能结冰）"
+        ],
+        "faq": [
+          {"question": "如果有雪或冰怎么办？", "answer": "我们会当天评估情况。如果路面有明显结冰，冰爪会有帮助。如果不安全，我们会缩短路线或改期。"},
+          {"question": "会有多冷？", "answer": "二月份886米海拔，预计温度在零度左右或以下，风寒效应会让体感更冷。穿多层衣物，带帽子和手套。"},
+          {"question": "这次比其他活动更难吗？", "answer": "是的。攀升陡峭，山顶暴露，冬季条件增加难度。你应该能够连续上坡行走一小时以上。"},
+          {"question": "天气变坏可以停下来吗？", "answer": "当然可以。我们可以随时折返。山脊很暴露，如果能见度下降或风力增大，我们会下撤。"}
+        ],
+        "startLabel": "起点：Storey Arms",
+        "endLabel": "终点：Pen-y-Fan山顶",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Pen-y-Fan+1",
+          "https://placehold.co/300x300/22c55e/white?text=Pen-y-Fan+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Pen-y-Fan+3",
+          "https://placehold.co/300x300/ef4444/white?text=Pen-y-Fan+4",
+          "https://placehold.co/300x300/8b5cf6/white?text=Pen-y-Fan+5",
+          "https://placehold.co/600x300/06b6d4/white?text=Pen-y-Fan+6",
+          "https://placehold.co/300x300/ec4899/white?text=Pen-y-Fan+7"
+        ],
+        "links": [
+          {"label": "Pen-y-Fan (维基百科)", "url": "https://en.wikipedia.org/wiki/Pen_y_Fan"},
+          {"label": "布雷肯比肯斯国家公园", "url": "https://www.breconbeacons.org/"}
+        ]
       }
     ]
   },
