@@ -29,6 +29,14 @@ docker exec opportunisticoutdoorsclub-dev npm run build:i18n
 docker exec opportunisticoutdoorsclub-dev npm run build
 ```
 
+## Deployment
+
+Site deploys to GitHub Pages at `opportunisticoutdoors.club` via GitHub Actions.
+
+- **Trigger**: Push to `main` branch
+- **Workflow**: `.github/workflows/deploy.yml`
+- **Output**: `dist/` directory deployed to GitHub Pages
+
 ## Project Structure
 
 - **`templates/`** - Page templates (one per page)
@@ -44,10 +52,14 @@ docker exec opportunisticoutdoorsclub-dev npm run build
 **Template syntax:**
 - `{{key}}` or `{{nested.key}}` - replaced with locale values
 - `{{> partialName}}` - includes `partials/partialName.html`
+- `{{#each events.trips}}...{{/each}}` - loops over arrays, use `{{trip.X}}` inside
+- `{{#each trip.bring}}...{{/each}}` - nested loops, use `{{this}}` for simple arrays
+- `{{@index}}` - current index in loop
+- `{{trip.field}}` - event page data (only in `event.html` template)
 
 **Workflow:** Edit templates, partials, or locales → dev server auto-rebuilds → Vite hot-reloads
 
-**Locale structure:** Hierarchical keys by section (`site`, `nav`, `home`, `about`, `faq`)
+**Locale structure:** Hierarchical keys by section (`site`, `nav`, `home`, `about`, `faq`, `events`)
 
 **Master file:** `en.json` is the source of truth; sync changes to `zh.json`
 
@@ -56,6 +68,12 @@ docker exec opportunisticoutdoorsclub-dev npm run build
 - **Date format**: ISO dates in JSON (e.g., `"2026-01-18"`) formatted by JS in the UI
 - **Past events hidden**: Cards with dates before today are automatically hidden on the homepage
 - **Structure**: Each trip has `itinerary` (timed stops), `faq` (per-trip Q&A), and `routeDescription` (summary)
+
+**Adding a new event:**
+1. Add trip object to `events.trips` array in `locales/en.json`
+2. Copy and translate in `locales/zh.json`
+3. Add slug to `.gitignore` (e.g., `/new-event-slug/`)
+4. Build generates `/{slug}/index.html` and `/zh/{slug}/index.html`
 
 ## Conventions
 
