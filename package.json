@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run build:i18n && concurrently \"vite\" \"npm run watch:i18n\"",
-    "build": "vite build && node src/build-i18n.js --outDir dist",
+    "build": "node src/build-i18n.js && vite build && node src/build-i18n.js --outDir dist",
     "build:i18n": "node src/build-i18n.js",
     "watch:i18n": "node src/watch-i18n.js",
     "preview": "vite preview"

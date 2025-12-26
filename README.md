@@ -1,2 +1,1 @@
-# tooc
-The Opportunistic Outdoors Club
+# The Opportunistic Outdoors Club
