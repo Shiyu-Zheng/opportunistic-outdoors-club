@@ -13,6 +13,40 @@ const outDir = outDirIndex !== -1 && args[outDirIndex + 1]
   ? path.resolve(rootDir, args[outDirIndex + 1])
   : rootDir
 
+// Load Vite manifest for production builds (to get hashed asset paths)
+let manifest = null
+const manifestPath = path.join(outDir, '.vite', 'manifest.json')
+if (outDir !== rootDir && fs.existsSync(manifestPath)) {
+  manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'))
+  console.log('Using Vite manifest for asset paths')
+}
+
+// Replace source paths with built asset paths from manifest
+function replaceAssetPaths(html) {
+  if (!manifest) return html
+
+  const entry = manifest['index.html']
+  if (!entry) return html
+
+  // Replace CSS path
+  if (entry.css && entry.css[0]) {
+    html = html.replace(
+      /href="\/src\/styles\.css"/g,
+      `href="/${entry.css[0]}"`
+    )
+  }
+
+  // Replace JS path
+  if (entry.file) {
+    html = html.replace(
+      /src="\/src\/main\.js"/g,
+      `src="/${entry.file}"`
+    )
+  }
+
+  return html
+}
+
 const localesDir = path.join(rootDir, 'locales')
 const templatesDir = path.join(rootDir, 'templates')
 const partialsDir = path.join(rootDir, 'partials')
@@ -189,7 +223,10 @@ for (const templateFile of templateFiles) {
         fs.mkdirSync(outputDir, { recursive: true })
       }
 
-      fs.writeFileSync(outputPath, output)
+      // Replace source paths with built asset paths for production
+      const finalOutput = replaceAssetPaths(output)
+
+      fs.writeFileSync(outputPath, finalOutput)
       const relativePath = path.relative(outDir, outputPath)
       console.log(`Generated: ${relativePath}`)
     }

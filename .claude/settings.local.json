@@ -5,7 +5,8 @@
       "Bash(mkdir:*)",
       "Bash(mv:*)",
       "Bash(docker logs:*)",
-      "WebFetch(domain:*)"
+      "WebFetch(domain:*)",
+      "Bash(docker exec:*)"
     ]
   }
 }
