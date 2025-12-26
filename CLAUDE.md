@@ -11,10 +11,10 @@ Static brochureware website for The Opportunistic Outdoors Club.
 
 ## Development
 
-All development happens inside Docker. Use the PowerShell script:
+All development happens inside Docker. Use the bash script:
 
-```powershell
-.\run.ps1
+```bash
+./run.sh
 ```
 
 This builds the Docker image and starts the dev server at http://localhost:5173
