@@ -35,6 +35,8 @@ docker exec opportunisticoutdoorsclub-dev npm run build
 - **`partials/`** - Shared template fragments (header, footer, etc.)
 - **`locales/`** - Translation JSON files (en.json, zh.json)
 - **`src/`** - JS modules and build scripts
+- **`public/`** - Static assets (logo, images) served at root
+- **`docs/`** - Design references and documentation
 - Generated HTML files are git-ignored; built from templates + locales
 
 ## i18n System

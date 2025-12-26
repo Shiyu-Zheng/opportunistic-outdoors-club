@@ -5,7 +5,6 @@ export default {
     './zh/**/*.html',
     './about/**/*.html',
     './faq/**/*.html',
-    './event1/**/*.html',
     './templates/**/*.html',
     './partials/**/*.html',
     './src/**/*.{js,ts,jsx,tsx}'

@@ -1,4 +1,4 @@
-# Build and run the safety-framework dev server with hot-reloading
+# Build and run the dev server with hot-reloading
 $imageName = "opportunisticoutdoors.club"
 $containerName = "opportunisticoutdoorsclub-dev"
 
@@ -11,8 +11,7 @@ docker build -t $imageName .
 
 # Run the container with volume mount for hot-reloading
 Write-Host "Starting dev server with hot-reloading..." -ForegroundColor Cyan
-$sourcePath = "$PSScriptRoot\opportunisticoutdoors.club"
-docker run -d --name $containerName -p 5173:5173 -v "${sourcePath}:/app" -v /app/node_modules $imageName
+docker run -d --name $containerName -p 5173:5173 -v "${PSScriptRoot}:/app" -v /app/node_modules $imageName
 
 Write-Host "`nDev server available at: http://localhost:5173" -ForegroundColor Green
 Write-Host "Hot-reloading enabled - edit files and see changes instantly" -ForegroundColor Cyan

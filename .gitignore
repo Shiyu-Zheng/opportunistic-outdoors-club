@@ -129,16 +129,16 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Generated i18n files (built from templates/)
-opportunisticoutdoors.club/*.html
-opportunisticoutdoors.club/*/
-opportunisticoutdoors.club/zh/
+# Generated i18n output (built from templates/)
+# Ignore all root HTML and directories, then un-ignore source folders
+/*.html
+/*/
 
-# Keep source directories (not generated)
-!opportunisticoutdoors.club/src/
-!opportunisticoutdoors.club/templates/
-!opportunisticoutdoors.club/partials/
-!opportunisticoutdoors.club/locales/
-!opportunisticoutdoors.club/images/
-!opportunisticoutdoors.club/public/
-!opportunisticoutdoors.club/docs/
+# Source directories (not generated)
+!src/
+!templates/
+!partials/
+!locales/
+!images/
+!public/
+!docs/
