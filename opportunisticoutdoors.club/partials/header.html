@@ -1,0 +1,97 @@
+<header class="sticky top-0 z-50 bg-white dark:bg-zinc-900 max-w-6xl mx-auto px-4 py-4">
+    <div class="bg-zinc-100 dark:bg-zinc-800 rounded-2xl px-6 py-5">
+      <!-- Desktop layout: logo left, nav center, controls right -->
+      <!-- Mobile layout: logo left, hamburger + controls right -->
+      <div class="flex items-center justify-between lg:grid lg:grid-cols-3 lg:items-center gap-4">
+        <!-- Logo -->
+        <a href="{{nav.homeLink}}" class="flex-shrink-0 text-zinc-900 dark:text-white" aria-label="{{site.title}}">
+          <svg class="h-14 w-auto" viewBox="0 0 400 180" fill="currentColor">
+            <text style="font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 400;" x="10" y="36">The</text>
+            <text style="font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 400;" x="200" y="80" text-anchor="middle">OPPORTUNISTIC</text>
+            <text style="font-family: 'Inter', sans-serif; font-size: 64px; font-weight: 600;" x="200" y="140" text-anchor="middle">OUTDOORS</text>
+            <text style="font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 400;" x="390" y="172" text-anchor="end">Club</text>
+          </svg>
+        </a>
+
+        <!-- Nav - hidden on mobile, centered on desktop -->
+        <nav class="hidden lg:flex lg:justify-center">
+          <ul class="flex items-center gap-6 text-sm">
+            <li><a href="{{nav.homeLink}}" class="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">{{nav.explore}}</a></li>
+            <li class="w-px h-4 bg-zinc-300 dark:bg-zinc-600"></li>
+            <li><a href="{{nav.aboutLink}}" class="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">{{nav.about}}</a></li>
+          </ul>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3 lg:justify-end">
+          <!-- Mobile Menu Toggle (hamburger) -->
+          <button
+            onclick="toggleMobileMenu()"
+            class="p-1 text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200 lg:hidden"
+            aria-label="Toggle menu"
+          >
+            <!-- Hamburger icon -->
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Close icon -->
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          <!-- Theme Toggle (hidden on mobile) -->
+          <button
+            onclick="toggleTheme()"
+            class="hidden lg:block p-1 text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+            aria-label="{{site.toggleTheme}}"
+          >
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <!-- Language Selector -->
+          <div class="flex items-center gap-1">
+            <button onclick="setLanguage('en')" class="p-1" aria-label="English">
+              <svg class="w-6 h-4 rounded-sm overflow-hidden" viewBox="0 0 60 40">
+                <clipPath id="gb-clip"><rect width="60" height="40" rx="2"/></clipPath>
+                <g clip-path="url(#gb-clip)">
+                  <rect width="60" height="40" fill="#012169"/>
+                  <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+                  <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5" clip-path="url(#gb-diag)"/>
+                  <clipPath id="gb-diag"><path d="M30,20 L60,40 L60,20 L30,20 L60,0 L30,0 L30,20 L0,0 L0,20 L30,20 L0,40 L30,40 Z"/></clipPath>
+                  <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/>
+                  <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/>
+                </g>
+              </svg>
+            </button>
+            <button onclick="setLanguage('zh')" class="p-1" aria-label="中文">
+              <svg class="w-6 h-4 rounded-sm overflow-hidden" viewBox="0 0 60 40">
+                <clipPath id="cn-clip"><rect width="60" height="40" rx="2"/></clipPath>
+                <g clip-path="url(#cn-clip)">
+                  <rect width="60" height="40" fill="#DE2910"/>
+                  <g fill="#FFDE00" transform="translate(5,5)">
+                    <polygon points="10,0 12.4,7.6 20,7.6 13.8,12.4 16.2,20 10,15.2 3.8,20 6.2,12.4 0,7.6 7.6,7.6"/>
+                    <polygon points="24,2 24.8,4.4 27.2,4.4 25.2,6 26,8.4 24,6.8 22,8.4 22.8,6 20.8,4.4 23.2,4.4" />
+                    <polygon points="28,6 28.8,8.4 31.2,8.4 29.2,10 30,12.4 28,10.8 26,12.4 26.8,10 24.8,8.4 27.2,8.4"/>
+                    <polygon points="28,12 28.8,14.4 31.2,14.4 29.2,16 30,18.4 28,16.8 26,18.4 26.8,16 24.8,14.4 27.2,14.4"/>
+                    <polygon points="24,16 24.8,18.4 27.2,18.4 25.2,20 26,22.4 24,20.8 22,22.4 22.8,20 20.8,18.4 23.2,18.4"/>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile nav - hidden by default, toggled by hamburger -->
+      <nav id="mobile-nav" class="hidden mt-3 pt-3 border-t border-zinc-200 dark:border-zinc-700 lg:hidden">
+        <ul class="flex flex-col items-center gap-1 text-sm">
+          <li><a href="{{nav.homeLink}}" class="block px-4 py-2 rounded-xl text-zinc-600 hover:text-zinc-900 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-700 transition-colors">{{nav.explore}}</a></li>
+          <li><a href="{{nav.aboutLink}}" class="block px-4 py-2 rounded-xl text-zinc-600 hover:text-zinc-900 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-700 transition-colors">{{nav.about}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

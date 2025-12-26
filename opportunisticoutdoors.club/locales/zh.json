@@ -1,0 +1,215 @@
+{
+  "lang": "zh",
+  "site": {
+    "title": "机会主义户外俱乐部",
+    "toggleTheme": "切换主题"
+  },
+  "nav": {
+    "explore": "探索",
+    "about": "关于我们",
+    "homeLink": "/zh/",
+    "aboutLink": "/zh/about/"
+  },
+  "home": {
+    "hero": {
+      "headline": "在卡迪夫，走出去看看。",
+      "description": "我们是一个小型友好的团体，专门为留学生和访客组织户外徒步活动。交通、路线、细节我们都安排好，你只需要来参加。"
+    },
+    "features": {
+      "feature1": {
+        "title": "交通无忧",
+        "description": "我们安排拼车和交通，不需要你有车或熟悉本地。"
+      },
+      "feature2": {
+        "title": "小团出行",
+        "description": "几辆车，一起出发。"
+      },
+      "feature3": {
+        "title": "专业摄影师",
+        "description": "每次都有摄影师随行，当天出片。"
+      }
+    }
+  },
+  "events": {
+    "title": "近期活动",
+    "learnMore": "详情",
+    "book": "报名",
+    "backLink": "返回所有活动",
+    "bookButton": "预订此活动",
+    "spotsLeft": "还剩名额",
+    "aboutTitle": "关于这次活动",
+    "itineraryTitle": "行程安排",
+    "bringTitle": "需要携带",
+    "detailsTitle": "活动详情",
+    "ctaText": "感兴趣？联系我们报名。",
+    "usefulLinksTitle": "相关链接",
+    "tripFaqTitle": "关于此活动的问题",
+    "labels": {
+      "meeting": "集合地点",
+      "transport": "交通",
+      "route": "路线",
+      "bring": "携带物品",
+      "footwear": "鞋子",
+      "notes": "备注",
+      "fee": "费用",
+      "difficulty": "难度"
+    },
+    "trips": [
+      {
+        "slug": "garth-mountain",
+        "title": "Garth Mountain",
+        "duration": "半天",
+        "fee": "£5",
+        "difficulty": "简单到中等",
+        "meeting": "Cardiff Central火车站，出租车站牌处，10点",
+        "transport": "车程20分钟至Gwaelod-y-Garth。我们会安排拼车。下午2:30返回Cardiff Central。",
+        "footwear": "抓地力好的运动鞋或登山鞋。雨后路面可能泥泞。",
+        "description": "307米山丘，山顶有4000年前的青铜时代墓葬。曾经是烽火台。1995年电影《矮山日记》的灵感来源。晴天能看到对岸的Weston-super-Mare。山脚的Gwaelod y Garth Inn是19世纪老酒吧，石板地面和壁炉。",
+        "routeDescription": "环形徒步登Garth Mountain（307米）。森林小路、开阔山坡、青铜时代遗址。4公里，2-3小时。",
+        "itinerary": [
+          {"time": "10:00", "description": "Cardiff Central火车站集合"},
+          {"time": "10:20", "description": "开车前往Gwaelod-y-Garth村（20分钟）"},
+          {"time": "10:30", "description": "开始徒步，穿过森林"},
+          {"time": "12:00", "description": "到达山顶，午餐休息，欣赏风景"},
+          {"time": "13:00", "description": "走另一条路线下山"},
+          {"time": "14:00", "description": "可选择在Gwaelod y Garth Inn酒吧停留"},
+          {"time": "14:30", "description": "返回Cardiff Central"}
+        ],
+        "bring": ["午餐和零食", "饮用水（至少1升）", "防水外套（天气变化快）"],
+        "faq": [
+          {"question": "起点有停车场吗？", "answer": "我们在Cardiff Central火车站集合，不需要自驾。如果你开车，Gwaelod-y-Garth村有免费路边停车。"},
+          {"question": "可以带狗吗？", "answer": "可以，但必须牵绳，因为山坡上有羊群。"},
+          {"question": "路陡吗？", "answer": "有些路段较陡，但不需要技术攀登。慢慢走，我们会等大家。"}
+        ],
+        "startLabel": "起点：Cardiff Central",
+        "endLabel": "终点：Garth Mountain山顶",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Garth+1",
+          "https://placehold.co/300x300/22c55e/white?text=Garth+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Garth+3",
+          "https://placehold.co/300x300/ef4444/white?text=Garth+4",
+          "https://placehold.co/300x300/8b5cf6/white?text=Garth+5"
+        ],
+        "links": [
+          {"label": "Garth Mountain (维基百科)", "url": "https://en.wikipedia.org/wiki/Garth_Mountain"},
+          {"label": "Gwaelod y Garth Inn 酒吧", "url": "https://www.gwaelodinn.co.uk/"}
+        ]
+      },
+      {
+        "slug": "castell-coch",
+        "title": "Castell Coch",
+        "duration": "半天",
+        "fee": "£3",
+        "difficulty": "简单",
+        "meeting": "Taffs Well火车站停车场，11点。需要的话可以10:45从Cardiff Central接。",
+        "transport": "从Central坐火车15分钟（往返约£4）或可接送。下午3点返回。",
+        "footwear": "运动鞋即可，路况良好",
+        "notes": "城堡门票可选（Cadw £8，会员免费）。维多利亚哥特复兴风格，内部值得参观。",
+        "description": "Fforest Fawr是古老的树林，有大橡树和山毛榉。小路通向Castell Coch城堡，维多利亚哥特式建筑，内部有彩绘装饰，还有可以升降的吊桥。城堡有咖啡馆。",
+        "routeDescription": "穿越Fforest Fawr古老树林前往Castell Coch城堡。路况良好。5公里，2小时。",
+        "itinerary": [
+          {"time": "10:45", "description": "可选择从Cardiff Central接送"},
+          {"time": "11:00", "description": "Taffs Well火车站停车场集合"},
+          {"time": "11:15", "description": "开始穿越Fforest Fawr树林"},
+          {"time": "12:00", "description": "到达Castell Coch城堡"},
+          {"time": "12:00", "description": "在城堡咖啡馆午餐（或自带）"},
+          {"time": "13:30", "description": "可选择参观城堡内部（门票£8）"},
+          {"time": "14:15", "description": "原路返回穿过树林"},
+          {"time": "15:00", "description": "返回Taffs Well / Cardiff Central"}
+        ],
+        "bring": ["午餐或咖啡馆消费", "水", "相机"],
+        "faq": [
+          {"question": "需要买门票进城堡吗？", "answer": "门票是可选的。成人£8（Cadw会员免费）。城堡庭院和咖啡馆免费进入。"},
+          {"question": "适合带孩子吗？", "answer": "非常适合。路线简单，孩子们会喜欢城堡。吊桥和塔楼是亮点。"}
+        ],
+        "startLabel": "起点：Taffs Well",
+        "endLabel": "终点：Castell Coch",
+        "images": [
+          "https://placehold.co/600x400/3b82f6/white?text=Castell+1",
+          "https://placehold.co/400x400/22c55e/white?text=Castell+2"
+        ],
+        "links": [
+          {"label": "Castell Coch 官网 (Cadw)", "url": "https://cadw.gov.wales/visit/places-to-visit/castell-coch"},
+          {"label": "Fforest Fawr 树林", "url": "https://www.forestryengland.uk/fforest-fawr"}
+        ]
+      },
+      {
+        "slug": "pontneddfechan-waterfalls",
+        "title": "Pontneddfechan 瀑布",
+        "duration": "全天",
+        "fee": "£8",
+        "difficulty": "中等",
+        "meeting": "Cardiff Central火车站，出租车站牌处，9点",
+        "transport": "车程1小时至Brecon Beacons的Pontneddfechan。返程在Merthyr停留吃饭。下午4:30回卡迪夫。",
+        "footwear": "登山鞋，不要运动鞋",
+        "description": "峡谷树林里有四个瀑布。Sgwd Clun-Gwyn最高。Sgwd yr Eira可以走到水帘后面。一路都是长满青苔的岩石和老树。",
+        "routeDescription": "四瀑布步道。8公里，3-4小时。岩石路段、陡峭台阶。可走到Sgwd yr Eira瀑布后面。",
+        "itinerary": [
+          {"time": "09:00", "description": "Cardiff Central火车站集合"},
+          {"time": "09:15", "description": "开车前往Pontneddfechan（1小时）"},
+          {"time": "10:15", "description": "开始四瀑布步道徒步"},
+          {"time": "11:00", "description": "到达Sgwd Clun-Gwyn（第一个瀑布）"},
+          {"time": "12:00", "description": "到达Sgwd yr Eira，走到瀑布后面"},
+          {"time": "13:00", "description": "河边午餐休息"},
+          {"time": "14:30", "description": "返回停车场"},
+          {"time": "15:00", "description": "开车去Merthyr，在酒吧停留"},
+          {"time": "16:30", "description": "返回Cardiff Central"}
+        ],
+        "bring": ["午餐", "充足饮用水", "防水外套"],
+        "faq": [
+          {"question": "徒步难度怎么样？", "answer": "中等难度。有170级台阶下到一个瀑布，部分路段有岩石。必须穿登山鞋。"},
+          {"question": "真的可以走到瀑布后面吗？", "answer": "可以，有一条古老的牧羊人小道通向Sgwd yr Eira瀑布后面。可能会被水雾打湿一点。"},
+          {"question": "下雨天怎么办？", "answer": "雨后瀑布更壮观。但路面会比较滑，小心行走。"}
+        ],
+        "startLabel": "起点：Pontneddfechan停车场",
+        "endLabel": "终点：Sgwd yr Eira瀑布",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Waterfalls+1",
+          "https://placehold.co/300x300/22c55e/white?text=Waterfalls+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Waterfalls+3",
+          "https://placehold.co/600x300/ef4444/white?text=Waterfalls+4"
+        ],
+        "links": [
+          {"label": "四瀑布步道", "url": "https://www.breconbeacons.org/things-to-do/walking/our-favourite-walks/four-waterfalls-walk"},
+          {"label": "Sgwd yr Eira 瀑布 (维基百科)", "url": "https://en.wikipedia.org/wiki/Sgwd_yr_Eira"}
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "关于我们",
+    "content": "了解更多关于机会主义户外俱乐部的信息。"
+  },
+  "footer": {
+    "tagline": "为卡迪夫访客组织的户外活动。",
+    "linksTitle": "链接",
+    "contactTitle": "联系方式",
+    "email": "hello@opportunisticoutdoors.club",
+    "location": "卡迪夫，威尔士",
+    "instagramUrl": "https://instagram.com/opportunisticoutdoors",
+    "instagramHandle": "@opportunisticoutdoors",
+    "copyright": "机会主义户外俱乐部。保留所有权利。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "description": "关于活动的常见问题。",
+    "items": [
+      {
+        "question": "如果需要取消怎么办？",
+        "answer": "活动前48小时通知我们可全额退款。临时取消无法退款，因为可能已经拒绝了其他报名者。"
+      },
+      {
+        "question": "需要自带装备吗？",
+        "answer": "只需要带每次活动列出的物品——通常是午餐、水和合适的鞋子。我们不做需要专业装备的活动。"
+      },
+      {
+        "question": "怎么付款？",
+        "answer": "活动前银行转账。报名后发送付款信息。"
+      },
+      {
+        "question": "天气不好怎么办？",
+        "answer": "小雨照常进行——这是威尔士。如果条件不安全，我们会改期或退款。如有疑问，会在活动前一晚通知大家。"
+      }
+    ]
+  }
+}

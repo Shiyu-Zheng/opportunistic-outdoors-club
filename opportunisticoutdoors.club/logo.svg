@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" fill="currentColor">
+  <style>
+    .logo-text { font-family: 'Inter', sans-serif; }
+    .word-the { font-size: 32px; font-weight: 400; }
+    .word-opportunistic { font-size: 44px; font-weight: 400; text-transform: uppercase; }
+    .word-outdoors { font-size: 64px; font-weight: 600; text-transform: uppercase; }
+    .word-club { font-size: 32px; font-weight: 400; }
+  </style>
+  <text class="logo-text word-the" x="10" y="36">The</text>
+  <text class="logo-text word-opportunistic" x="200" y="80" text-anchor="middle">OPPORTUNISTIC</text>
+  <text class="logo-text word-outdoors" x="200" y="140" text-anchor="middle">OUTDOORS</text>
+  <text class="logo-text word-club" x="390" y="172" text-anchor="end">Club</text>
+</svg>

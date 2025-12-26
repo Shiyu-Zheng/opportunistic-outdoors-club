@@ -1,0 +1,239 @@
+{
+  "lang": "en",
+  "site": {
+    "title": "The Opportunistic Outdoors Club",
+    "toggleTheme": "Toggle theme"
+  },
+  "nav": {
+    "explore": "Explore",
+    "about": "About Us",
+    "homeLink": "/",
+    "aboutLink": "/about/"
+  },
+  "home": {
+    "hero": {
+      "headline": "Get outdoors while you're in Cardiff.",
+      "description": "We're a small, friendly group that organises walks and outings for international students and visitors. We sort out the transport, plan the route, and handle the details. You just need to show up."
+    },
+    "features": {
+      "feature1": {
+        "title": "Transport Sorted",
+        "description": "We arrange lifts and coordinate travel so you don't need a car or local knowledge."
+      },
+      "feature2": {
+        "title": "Small Groups",
+        "description": "Everyone travels together in a few cars."
+      },
+      "feature3": {
+        "title": "Professional Photographer",
+        "description": "A photographer comes on every trip. Photos shared same day."
+      }
+    }
+  },
+  "events": {
+    "title": "Upcoming",
+    "learnMore": "Details",
+    "book": "Join",
+    "backLink": "Back to all trips",
+    "bookButton": "Book this trip",
+    "spotsLeft": "spots left",
+    "aboutTitle": "About this trip",
+    "itineraryTitle": "Itinerary",
+    "bringTitle": "What to bring",
+    "detailsTitle": "Trip Details",
+    "ctaText": "Interested? Get in touch to join.",
+    "usefulLinksTitle": "Useful Links",
+    "tripFaqTitle": "Questions about this trip",
+    "labels": {
+      "meeting": "Meeting Point",
+      "transport": "Transport",
+      "route": "Route",
+      "bring": "Bring",
+      "footwear": "Footwear",
+      "notes": "Notes",
+      "fee": "Fee",
+      "difficulty": "Difficulty"
+    },
+    "trips": [
+      {
+        "slug": "garth-mountain",
+        "title": "Garth Mountain",
+        "date": "2026-01-18",
+        "times": "10am - 2:30pm",
+        "duration": "Half day",
+        "spotsFilled": "4",
+        "spotsTotal": "8",
+        "fee": "£5",
+        "difficulty": "Easy-moderate",
+        "meeting": "Cardiff Central station, by the taxi rank, 10am",
+        "transport": "20 minute drive to Gwaelod-y-Garth. We'll arrange lifts. Return to Cardiff Central by 2:30pm.",
+        "footwear": "Trainers with good grip or walking shoes. The path can be muddy after rain.",
+        "description": "We start from the village, up through evergreen forest, then out onto open hillside with sheep grazing. At the top are Bronze Age burial mounds (4000 years old) and views across to Weston-super-Mare. We head back down a different route to the Gwaelod y Garth Inn, a 19th century pub with flagstone floors and open fires.",
+        "routeDescription": "Circular walk up Garth Mountain (307m). Forest paths, open hillside, Bronze Age summit. 4km, 2-3 hours.",
+        "itinerary": [
+          {"time": "10:00", "description": "Meet at Cardiff Central station, by the taxi rank"},
+          {"time": "10:20", "description": "Drive to Gwaelod-y-Garth village (20 mins)"},
+          {"time": "10:30", "description": "Start walking up through the forest"},
+          {"time": "12:00", "description": "Reach summit, lunch break with views"},
+          {"time": "13:00", "description": "Descend via alternative route"},
+          {"time": "14:00", "description": "Optional stop at Gwaelod y Garth Inn"},
+          {"time": "14:30", "description": "Return to Cardiff Central"}
+        ],
+        "bring": ["Packed lunch and snacks", "Water (at least 1 litre)", "Waterproof jacket (weather can change quickly)"],
+        "faq": [
+          {"question": "Is there parking at the start?", "answer": "We meet at Cardiff Central station, so no car needed. If you're driving, there's free street parking in Gwaelod-y-Garth village."},
+          {"question": "Can I bring my dog?", "answer": "Yes, dogs are welcome but must be kept on leads as there are sheep grazing on the hillside."},
+          {"question": "How steep is it?", "answer": "Some sections are steep but nothing technical. Take your time and we'll wait for everyone."}
+        ],
+        "startLat": 51.4816,
+        "startLng": -3.1791,
+        "startLabel": "Start: Cardiff Central",
+        "endLat": 51.5271,
+        "endLng": -3.2519,
+        "endLabel": "End: Garth Mountain Summit",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Garth+1",
+          "https://placehold.co/300x300/22c55e/white?text=Garth+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Garth+3",
+          "https://placehold.co/300x300/ef4444/white?text=Garth+4",
+          "https://placehold.co/300x300/8b5cf6/white?text=Garth+5"
+        ],
+        "links": [
+          {"label": "Garth Mountain on Wikipedia", "url": "https://en.wikipedia.org/wiki/Garth_Mountain"},
+          {"label": "The Gwaelod y Garth Inn", "url": "https://www.gwaelodinn.co.uk/"}
+        ]
+      },
+      {
+        "slug": "castell-coch",
+        "title": "Castell Coch",
+        "date": "2026-01-25",
+        "times": "11am - 3pm",
+        "duration": "Half day",
+        "spotsFilled": "3",
+        "spotsTotal": "8",
+        "fee": "£3",
+        "difficulty": "Easy",
+        "meeting": "Taffs Well station car park, 11am. Pickup from Cardiff Central at 10:45am if needed.",
+        "transport": "Train from Central 15 mins (about £4 return) or pickup available. Back by 3pm.",
+        "footwear": "Trainers fine, paths well maintained",
+        "notes": "Castle entry optional (£8 Cadw, members free). Victorian Gothic revival, interiors worth seeing.",
+        "description": "We catch the train to Taffs Well and walk from there through Fforest Fawr, old woodland with big oaks and beech trees. The path climbs at the end to Castell Coch, a Victorian Gothic castle with painted ceilings and a working drawbridge. We have lunch at the castle café, then head back the same way.",
+        "routeDescription": "Easy woodland walk through Fforest Fawr to Castell Coch. Well-maintained paths. 5km, 2 hours.",
+        "itinerary": [
+          {"time": "10:45", "description": "Optional pickup from Cardiff Central"},
+          {"time": "11:00", "description": "Meet at Taffs Well station car park"},
+          {"time": "11:15", "description": "Start walking through Fforest Fawr woodland"},
+          {"time": "12:00", "description": "Arrive at Castell Coch"},
+          {"time": "12:00", "description": "Lunch at castle café (or bring your own)"},
+          {"time": "13:30", "description": "Optional castle tour (£8 entry)"},
+          {"time": "14:15", "description": "Walk back through the woods"},
+          {"time": "15:00", "description": "Return to Taffs Well / Cardiff Central"}
+        ],
+        "bring": ["Packed lunch or money for café", "Water", "Camera"],
+        "faq": [
+          {"question": "Do I need to pay to enter the castle?", "answer": "Entry is optional. It's £8 for adults (Cadw members free). The grounds and café are free to access."},
+          {"question": "Is this suitable for children?", "answer": "Yes, the walk is easy and kids love the castle. The drawbridge and towers are a highlight."}
+        ],
+        "startLat": 51.5418,
+        "startLng": -3.2631,
+        "startLabel": "Start: Taffs Well",
+        "endLat": 51.5322,
+        "endLng": -3.2544,
+        "endLabel": "End: Castell Coch",
+        "images": [
+          "https://placehold.co/600x400/3b82f6/white?text=Castell+1",
+          "https://placehold.co/400x400/22c55e/white?text=Castell+2"
+        ],
+        "links": [
+          {"label": "Castell Coch on Cadw", "url": "https://cadw.gov.wales/visit/places-to-visit/castell-coch"},
+          {"label": "Fforest Fawr woodlands", "url": "https://www.forestryengland.uk/fforest-fawr"}
+        ]
+      },
+      {
+        "slug": "pontneddfechan-waterfalls",
+        "title": "Pontneddfechan Waterfalls",
+        "date": "2026-02-01",
+        "times": "9am - 4pm",
+        "duration": "Full day",
+        "spotsFilled": "6",
+        "spotsTotal": "8",
+        "fee": "£8",
+        "difficulty": "Moderate",
+        "meeting": "Cardiff Central station, by the taxi rank, 9am",
+        "transport": "1 hour drive to Pontneddfechan, Brecon Beacons. Pub stop in Merthyr on the way back. In Cardiff by 4:30pm.",
+        "footwear": "Walking boots, not trainers",
+        "description": "We drive an hour into the Brecon Beacons and follow the rivers Mellte and Hepste through sandstone gorges, passing four waterfalls. The main one is Sgwd yr Eira ('Waterfall of Snow'). 170 steps down, then we walk behind the 30ft cascade on an old sheep farmers' path. Pub lunch in Merthyr on the way back.",
+        "routeDescription": "Four Waterfalls Trail. 8km, 3-4 hours. Rocky sections, steep steps. Walk behind Sgwd yr Eira.",
+        "itinerary": [
+          {"time": "09:00", "description": "Meet at Cardiff Central station, by the taxi rank"},
+          {"time": "09:15", "description": "Drive to Pontneddfechan (1 hour)"},
+          {"time": "10:15", "description": "Start walking the Four Waterfalls Trail"},
+          {"time": "11:00", "description": "Sgwd Clun-Gwyn (first waterfall)"},
+          {"time": "12:00", "description": "Sgwd yr Eira, walk behind the waterfall"},
+          {"time": "13:00", "description": "Lunch break by the river"},
+          {"time": "14:30", "description": "Return to car park"},
+          {"time": "15:00", "description": "Drive to Merthyr, pub stop"},
+          {"time": "16:30", "description": "Return to Cardiff Central"}
+        ],
+        "bring": ["Packed lunch", "Plenty of water", "Waterproof jacket"],
+        "faq": [
+          {"question": "How difficult is the walk?", "answer": "Moderate. There are 170 steps down to one waterfall and the path is rocky in places. Walking boots essential."},
+          {"question": "Can we actually walk behind the waterfall?", "answer": "Yes, there's an old sheep farmers' path that goes behind Sgwd yr Eira. You might get a bit of spray."},
+          {"question": "What if it's been raining?", "answer": "The waterfalls are even more impressive after rain. The paths can be slippery though, so take care."}
+        ],
+        "startLat": 51.7631,
+        "startLng": -3.5969,
+        "startLabel": "Start: Pontneddfechan car park",
+        "endLat": 51.7823,
+        "endLng": -3.5712,
+        "endLabel": "End: Sgwd yr Eira",
+        "images": [
+          "https://placehold.co/600x600/3b82f6/white?text=Waterfalls+1",
+          "https://placehold.co/300x300/22c55e/white?text=Waterfalls+2",
+          "https://placehold.co/300x300/f59e0b/white?text=Waterfalls+3",
+          "https://placehold.co/600x300/ef4444/white?text=Waterfalls+4"
+        ],
+        "links": [
+          {"label": "Four Waterfalls Walk", "url": "https://www.breconbeacons.org/things-to-do/walking/our-favourite-walks/four-waterfalls-walk"},
+          {"label": "Sgwd yr Eira waterfall", "url": "https://en.wikipedia.org/wiki/Sgwd_yr_Eira"}
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Learn more about The Opportunistic Outdoors Club."
+  },
+  "footer": {
+    "tagline": "Outdoor trips for visitors to Cardiff.",
+    "linksTitle": "Links",
+    "contactTitle": "Contact",
+    "email": "hello@opportunisticoutdoors.club",
+    "location": "Cardiff, Wales",
+    "instagramUrl": "https://instagram.com/opportunisticoutdoors",
+    "instagramHandle": "@opportunisticoutdoors",
+    "copyright": "The Opportunistic Outdoors Club. All rights reserved."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Common questions about how trips work.",
+    "items": [
+      {
+        "question": "What if I need to cancel?",
+        "answer": "Let us know at least 48 hours before and we'll refund your fee. Last-minute cancellations can't be refunded as we may have turned others away."
+      },
+      {
+        "question": "Do I need to bring my own equipment?",
+        "answer": "Just what's listed on each trip — usually lunch, water, and appropriate footwear. We don't do anything requiring specialist gear."
+      },
+      {
+        "question": "How do I pay?",
+        "answer": "Bank transfer before the trip. Details sent when you book."
+      },
+      {
+        "question": "What happens if the weather is bad?",
+        "answer": "We go ahead in light rain — it's Wales. If conditions are unsafe, we'll reschedule or refund. We'll message the group the evening before if there's any doubt."
+      }
+    ]
+  }
+}

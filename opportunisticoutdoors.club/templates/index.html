@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{site.title}}</title>
+  <link rel="stylesheet" href="/src/styles.css">
+  {{> theme-init}}
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="min-h-screen bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-sans">
+  {{> header}}
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">{{home.hero.headline}}</h1>
+        <p class="text-lg text-zinc-600 dark:text-zinc-400">{{home.hero.description}}</p>
+      </div>
+      <div class="order-first md:order-last">
+        <img src="https://placehold.co/600x400/e4e4e7/a1a1aa?text=Hero+Image" alt="" class="w-full rounded-2xl">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-zinc-100 dark:bg-zinc-800 rounded-2xl p-8 md:p-12 mb-20">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">{{home.features.feature1.title}}</h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">{{home.features.feature1.description}}</p>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">{{home.features.feature2.title}}</h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">{{home.features.feature2.description}}</p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">{{home.features.feature3.title}}</h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">{{home.features.feature3.description}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">{{events.title}}</h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+        {{#each events.trips}}
+        <article class="event-card bg-zinc-100 dark:bg-zinc-800 rounded-2xl overflow-hidden flex flex-col" data-date="{{trip.date}}">
+          <a href="{{nav.homeLink}}{{trip.slug}}/" class="relative h-[450px] overflow-hidden block">
+            <img src="{{trip.images.0}}" alt="{{trip.title}}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-bold text-2xl"><a href="{{nav.homeLink}}{{trip.slug}}/" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{{trip.title}}</a></h3>
+              <div class="flex-shrink-0 flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-lg text-xs font-medium">
+                <span>{{trip.spotsFilled}}</span>
+                <span class="text-blue-400 dark:text-blue-500">/</span>
+                <span>{{trip.spotsTotal}}</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400 mb-4">
+              <span class="event-date"></span>
+              <span class="text-zinc-300 dark:text-zinc-600">|</span>
+              <span>{{trip.times}}</span>
+              <span class="text-zinc-300 dark:text-zinc-600">|</span>
+              <span>{{trip.duration}}</span>
+              <span class="text-zinc-300 dark:text-zinc-600">|</span>
+              <span class="font-medium text-zinc-700 dark:text-zinc-300">{{trip.fee}}</span>
+            </div>
+            <p class="text-sm text-zinc-900 dark:text-zinc-400 mb-6">{{trip.description}}</p>
+            <dl class="text-sm space-y-5 mb-8 flex-1">
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-0.5">{{events.labels.meeting}}</dt>
+                <dd class="text-zinc-700 dark:text-zinc-300">{{trip.meeting}}</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-0.5">{{events.labels.route}}</dt>
+                <dd class="text-zinc-700 dark:text-zinc-300">{{trip.routeDescription}}</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-0.5">{{events.labels.footwear}}</dt>
+                <dd class="text-zinc-700 dark:text-zinc-300">{{trip.footwear}}</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-0.5">{{events.labels.difficulty}}</dt>
+                <dd class="text-zinc-700 dark:text-zinc-300">{{trip.difficulty}}</dd>
+              </div>
+            </dl>
+            <div class="flex gap-3">
+              <a href="{{nav.homeLink}}{{trip.slug}}/" class="flex-1 text-center px-4 py-2 border border-zinc-300 dark:border-zinc-600 rounded-xl text-sm font-medium hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">{{events.learnMore}}</a>
+              <a href="#" class="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-colors">{{events.book}}</a>
+            </div>
+          </div>
+        </article>
+        {{/each}}
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">{{faq.title}}</h2>
+
+      <!-- Mobile: Accordion -->
+      <div class="lg:hidden space-y-3">
+        {{#each faq.items}}
+        <div class="faq-item border border-zinc-200 dark:border-zinc-700 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+            <span class="font-medium">{{item.question}}</span>
+            <svg class="faq-icon w-5 h-5 text-zinc-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m6-6H6"></path>
+            </svg>
+          </button>
+          <div class="faq-answer-mobile hidden px-4 pb-4 text-sm text-zinc-600 dark:text-zinc-400">
+            {{item.answer}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+
+      <!-- Desktop: Two-column -->
+      <div class="hidden lg:grid lg:grid-cols-2 gap-6">
+        <!-- Questions (left) -->
+        <div class="space-y-3" id="faq-questions"></div>
+
+        <!-- Answer (right) -->
+        <div class="bg-zinc-100 dark:bg-zinc-800 rounded-2xl p-6 lg:p-8 min-h-[200px]" id="faq-answers"></div>
+      </div>
+
+      <!-- FAQ data for desktop JS -->
+      <script id="faq-data" type="application/json">{{faq.items}}</script>
+    </section>
+  </main>
+
+  <script>
+    // Format dates and filter past events
+    (function() {
+      const lang = document.documentElement.lang || 'en';
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      document.querySelectorAll('.event-card').forEach(card => {
+        const dateStr = card.dataset.date;
+        if (!dateStr) return;
+
+        const eventDate = new Date(dateStr + 'T00:00:00');
+
+        // Hide past events
+        if (eventDate < today) {
+          card.style.display = 'none';
+          return;
+        }
+
+        // Format date nicely
+        const dateSpan = card.querySelector('.event-date');
+        if (dateSpan) {
+          const options = { weekday: 'long', day: 'numeric', month: 'long' };
+          const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
+          dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
+        }
+      });
+    })();
+
+    // Desktop FAQ: render from JSON data
+    (function() {
+      const dataEl = document.getElementById('faq-data');
+      if (!dataEl) return;
+
+      try {
+        const items = JSON.parse(dataEl.textContent);
+        const questionsEl = document.getElementById('faq-questions');
+        const answersEl = document.getElementById('faq-answers');
+
+        if (!questionsEl || !answersEl || !items.length) return;
+
+        // Render questions
+        questionsEl.innerHTML = items.map((item, i) => `
+          <button onclick="showAnswer(${i})" data-faq="${i}" class="faq-btn ${i === 0 ? 'faq-btn-active bg-zinc-100 dark:bg-zinc-800' : ''} w-full text-left p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+            <span class="font-medium">${item.question}</span>
+          </button>
+        `).join('');
+
+        // Render answers
+        answersEl.innerHTML = items.map((item, i) => `
+          <div id="faq-answer-${i}" class="faq-answer ${i === 0 ? '' : 'hidden'}">
+            <p class="text-zinc-700 dark:text-zinc-300">${item.answer}</p>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error('Failed to parse FAQ data:', e);
+      }
+    })();
+
+    // Desktop: show answer in right panel
+    function showAnswer(num) {
+      document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+      document.getElementById('faq-answer-' + num).classList.remove('hidden');
+      document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.classList.remove('faq-btn-active', 'bg-zinc-100', 'dark:bg-zinc-800');
+      });
+      document.querySelector('[data-faq="' + num + '"]').classList.add('faq-btn-active', 'bg-zinc-100', 'dark:bg-zinc-800');
+    }
+
+    // Mobile: toggle accordion
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const answer = item.querySelector('.faq-answer-mobile');
+      const icon = item.querySelector('.faq-icon');
+      const isOpen = !answer.classList.contains('hidden');
+
+      if (isOpen) {
+        answer.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        answer.classList.remove('hidden');
+        icon.style.transform = 'rotate(45deg)';
+      }
+    }
+  </script>
+
+  {{> footer}}
+</body>
+</html>

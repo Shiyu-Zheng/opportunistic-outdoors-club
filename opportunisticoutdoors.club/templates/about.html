@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{about.title}} - {{site.title}}</title>
+  <link rel="stylesheet" href="/src/styles.css">
+  {{> theme-init}}
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="min-h-screen bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-sans">
+  {{> header}}
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-4xl font-bold mb-4">{{about.title}}</h2>
+    <p class="text-lg text-zinc-600 dark:text-zinc-400">{{about.content}}</p>
+  </main>
+  {{> footer}}
+</body>
+</html>
