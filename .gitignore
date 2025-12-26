@@ -135,6 +135,7 @@ dist
 /*/
 
 # Source directories (not generated)
+!.github/
 !src/
 !templates/
 !partials/
