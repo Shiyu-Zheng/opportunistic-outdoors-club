@@ -6,6 +6,13 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
 
+// Support --outDir argument for production builds
+const args = process.argv.slice(2)
+const outDirIndex = args.indexOf('--outDir')
+const outDir = outDirIndex !== -1 && args[outDirIndex + 1]
+  ? path.resolve(rootDir, args[outDirIndex + 1])
+  : rootDir
+
 const localesDir = path.join(rootDir, 'locales')
 const templatesDir = path.join(rootDir, 'templates')
 const partialsDir = path.join(rootDir, 'partials')
@@ -164,15 +171,15 @@ for (const templateFile of templateFiles) {
       let outputPath
       if (outputName === 'index') {
         if (lang === 'en') {
-          outputPath = path.join(rootDir, 'index.html')
+          outputPath = path.join(outDir, 'index.html')
         } else {
-          outputPath = path.join(rootDir, lang, 'index.html')
+          outputPath = path.join(outDir, lang, 'index.html')
         }
       } else {
         if (lang === 'en') {
-          outputPath = path.join(rootDir, outputName, 'index.html')
+          outputPath = path.join(outDir, outputName, 'index.html')
         } else {
-          outputPath = path.join(rootDir, lang, outputName, 'index.html')
+          outputPath = path.join(outDir, lang, outputName, 'index.html')
         }
       }
 
@@ -183,7 +190,7 @@ for (const templateFile of templateFiles) {
       }
 
       fs.writeFileSync(outputPath, output)
-      const relativePath = path.relative(rootDir, outputPath)
+      const relativePath = path.relative(outDir, outputPath)
       console.log(`Generated: ${relativePath}`)
     }
   }
