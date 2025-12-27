@@ -23,7 +23,7 @@
     </a>
 
     <!-- Gallery -->
-    <div id="gallery" class="mb-10" data-images='{{trip.images}}'></div>
+    <div id="gallery" class="mb-10 [&_img]:cursor-pointer [&_img]:transition-opacity [&_img]:hover:opacity-90 [&_img]:[image-rendering:high-quality]" data-images='{{trip.images}}'></div>
 
     <!-- Event Header -->
     <div class="mb-10">
@@ -144,6 +144,16 @@
 
   {{> footer}}
 
+  <!-- Image Modal -->
+  <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+    <button id="modal-close" class="absolute top-4 right-4 text-white hover:text-zinc-300 transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <img id="modal-image" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg">
+  </div>
+
   <script>
     (function() {
     document.addEventListener('DOMContentLoaded', function() {
@@ -182,8 +192,8 @@
                     <div class="w-3 h-3 rounded-full ${dotColor} flex-shrink-0 mt-1.5"></div>
                     <div class="w-0.5 flex-1 bg-zinc-200 dark:bg-zinc-700 ${lineClass}"></div>
                   </div>
-                  <div class="pb-2 ${isLast ? 'pb-0' : ''}">
-                    <span class="text-sm font-medium text-zinc-900 dark:text-zinc-100 inline-block w-16">${item.time}</span>
+                  <div class="pb-2 flex gap-3 ${isLast ? 'pb-0' : ''}">
+                    <span class="text-sm font-medium text-zinc-900 dark:text-zinc-100 flex-shrink-0 w-14">${item.time}</span>
                     <span class="text-sm text-zinc-600 dark:text-zinc-400">${item.description}</span>
                   </div>
                 </div>
@@ -369,6 +379,61 @@
         icon.style.transform = 'rotate(45deg)';
       }
     };
+
+    // Image modal
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalClose = document.getElementById('modal-close');
+    let galleryImages = [];
+    let currentIndex = 0;
+
+    function openModal(src) {
+      galleryImages = Array.from(document.querySelectorAll('#gallery img')).map(img => img.src);
+      currentIndex = galleryImages.indexOf(src);
+      modalImg.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    function showImage(index) {
+      if (index < 0) index = galleryImages.length - 1;
+      if (index >= galleryImages.length) index = 0;
+      currentIndex = index;
+      modalImg.src = galleryImages[currentIndex];
+    }
+
+    // Click on gallery images
+    document.getElementById('gallery').addEventListener('click', function(e) {
+      if (e.target.tagName === 'IMG') {
+        openModal(e.target.src);
+      }
+    });
+
+    // Close on X button
+    modalClose.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    });
     })();
   </script>
 </body>
