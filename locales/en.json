@@ -58,36 +58,35 @@
       {
         "slug": "garth-mountain",
         "title": "Garth Mountain",
-        "date": "2026-01-18",
-        "times": "10am - 2:30pm",
+        "date": "2026-01-03",
+        "times": "11am - 4pm",
         "duration": "Half day",
-        "spotsFilled": "4",
+        "spotsFilled": "3",
         "spotsTotal": "8",
-        "fee": "£5",
+        "fee": "£18",
         "difficulty": "Easy-moderate",
-        "meeting": "Cardiff Central station, by the taxi rank, 10am",
-        "transport": "20 minute drive to Gwaelod-y-Garth. We'll arrange lifts. Return to Cardiff Central by 2:30pm.",
-        "footwear": "Trainers with good grip or walking shoes. The path can be muddy after rain.",
-        "description": "We start from the village, up through evergreen forest, then out onto open hillside with sheep grazing. At the top are Bronze Age burial mounds (4000 years old) and views across to Weston-super-Mare. We head back down a different route to the Gwaelod y Garth Inn, a 19th century pub with flagstone floors and open fires.",
-        "routeDescription": "Circular walk up Garth Mountain (307m). Forest paths, open hillside, Bronze Age summit. 4km, 2-3 hours.",
+        "meeting": "Mackintosh Sport club CF24 3JW, 11am",
+        "transport": "30 minute drive to Gwaelod-y-Garth. We'll arrange lifts. Return to Cardiff Central by 4pm.",
+        "description": "We start from the village, up through evergreen forest, then out onto open hillside. Depending on the season and weather, you will see cows grazing, sheep having a sunbath, crows chilling on the grass. Don't forget to check out the hidden mushrooms under your feet as well. At the top,There are four Bronze Age burial mounds that have stood here for 4000 years.you can also see panoramic views over Taffs Well, the river Taff, Cardiff with its iconic landmarks, and Somerset in the distance.  We head back down a different route to the Gwaelod y Garth Inn, a 19th century pub with flagstone floors and open fires. Finish your day with a Baileys shot or a hot cocoa and each other's company.",
+        "routeDescription": "5km circular route. Summit 307m, cumulative climb 257m.",
         "itinerary": [
-          {"time": "10:00", "description": "Meet at Cardiff Central station, by the taxi rank"},
-          {"time": "10:20", "description": "Drive to Gwaelod-y-Garth village (20 mins)"},
-          {"time": "10:30", "description": "Start walking up through the forest"},
-          {"time": "12:00", "description": "Reach summit, lunch break with views"},
-          {"time": "13:00", "description": "Descend via alternative route"},
+          {"time": "11:00", "description": "Meet at Cardiff Sport club, we recommend coming half an hour early as this is also where Roath Market happens every week. There are lots of local products and you can find good coffee, food to take with you for the day as well"},
+          {"time": "11:10", "description": "Drive to Gwaelod-y-Garth village (30 mins)"},
+          {"time": "11:40", "description": "Start walking up through the pine forest"},
+          {"time": "13:00", "description": "Reach summit, lunch break with views"},
+          {"time": "13:30", "description": "Descend via alternative route"},
           {"time": "14:00", "description": "Optional stop at Gwaelod y Garth Inn"},
-          {"time": "14:30", "description": "Return to Cardiff Central"}
+          {"time": "15:00", "description": "Return to Cardiff Central"}
         ],
-        "bring": ["Packed lunch and snacks", "Water (at least 1 litre)", "Waterproof jacket (weather can change quickly)"],
+        "bring": ["Packed lunch and snacks", "Water (at least 1 litre)"],
         "faq": [
-          {"question": "Is there parking at the start?", "answer": "We meet at Cardiff Central station, so no car needed. If you're driving, there's free street parking in Gwaelod-y-Garth village."},
-          {"question": "Can I bring my dog?", "answer": "Yes, dogs are welcome but must be kept on leads as there are sheep grazing on the hillside."},
+          {"question": "What should I wear?", "answer": "It is windy and cold on the summit. Dress as warm as possible. Proper layers, gloves, hat, scarf (bring waterproof just in case weather can change quickly). Trainers with good grip or walking shoes. The path can be muddy after rain."},
+
           {"question": "How steep is it?", "answer": "Some sections are steep but nothing technical. Take your time and we'll wait for everyone."}
         ],
         "startLat": 51.4816,
         "startLng": -3.1791,
-        "startLabel": "Start: Cardiff Central",
+        "startLabel": "Start: Mackintosh Sport club",
         "endLat": 51.5271,
         "endLng": -3.2519,
         "endLabel": "End: Garth Mountain Summit",
@@ -100,7 +99,7 @@
         ],
         "links": [
           {"label": "Garth Mountain on Wikipedia", "url": "https://en.wikipedia.org/wiki/Garth_Mountain"},
-          {"label": "The Gwaelod y Garth Inn", "url": "https://www.gwaelodinn.co.uk/"}
+          {"label": "Roath Market", "url": "http://www.riversidemarket.org.uk/roath-market/"}
         ]
       },
       {

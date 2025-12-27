@@ -58,30 +58,37 @@
       {
         "slug": "garth-mountain",
         "title": "Garth Mountain",
+        "date": "2026-01-03",
+        "times": "11am - 4pm",
         "duration": "半天",
-        "fee": "£5",
+        "spotsFilled": "3",
+        "spotsTotal": "8",
+        "fee": "£18",
         "difficulty": "简单到中等",
-        "meeting": "Cardiff Central火车站，出租车站牌处，10点",
-        "transport": "车程20分钟至Gwaelod-y-Garth。我们会安排拼车。下午2:30返回Cardiff Central。",
-        "footwear": "抓地力好的运动鞋或登山鞋。雨后路面可能泥泞。",
-        "description": "307米山丘，山顶有4000年前的青铜时代墓葬。曾经是烽火台。1995年电影《矮山日记》的灵感来源。晴天能看到对岸的Weston-super-Mare。山脚的Gwaelod y Garth Inn是19世纪老酒吧，石板地面和壁炉。",
-        "routeDescription": "环形徒步登Garth Mountain（307米）。森林小路、开阔山坡、青铜时代遗址。4公里，2-3小时。",
+        "meeting": "Mackintosh Sport club CF24 3JW, 11am",
+        "transport": "车程30分钟至Gwaelod-y-Garth。我们会安排拼车。下午4点返回Cardiff Central。",
+        "description": "从村庄出发，穿过常绿森林，然后到开阔的山坡。根据季节和天气，你会看到牛在吃草，羊在晒太阳，乌鸦在草地上闲逛。别忘了留意脚下的隐藏蘑菇。在山顶，可以全景俯瞰Taffs Well、塔夫河、Cardiff的标志性建筑，以及远处的Somerset。这里有四座已有4000年历史的青铜时代墓葬。我们走另一条路线下山到Gwaelod y Garth Inn，一个19世纪的酒吧，有石板地面和壁炉。用Baileys酒或热可可结束你的一天，享受彼此的陪伴。",
+        "routeDescription": "5公里环形路线。最高点307米，累计爬升257米。",
         "itinerary": [
-          {"time": "10:00", "description": "Cardiff Central火车站集合"},
-          {"time": "10:20", "description": "开车前往Gwaelod-y-Garth村（20分钟）"},
-          {"time": "10:30", "description": "开始徒步，穿过森林"},
-          {"time": "12:00", "description": "到达山顶，午餐休息，欣赏风景"},
-          {"time": "13:00", "description": "走另一条路线下山"},
+          {"time": "11:00", "description": "在Cardiff Sport club集合，强烈建议提前半小时到，因为这里每周也是Roath Market的举办地。有很多本地产品，你可以找到好咖啡和食物带上路"},
+          {"time": "11:10", "description": "开车前往Gwaelod-y-Garth村（30分钟）"},
+          {"time": "11:40", "description": "开始徒步，穿过森林"},
+          {"time": "13:00", "description": "到达山顶，午餐休息，欣赏风景"},
+          {"time": "13:30", "description": "走另一条路线下山"},
           {"time": "14:00", "description": "可选择在Gwaelod y Garth Inn酒吧停留"},
-          {"time": "14:30", "description": "返回Cardiff Central"}
+          {"time": "15:00", "description": "返回Cardiff Central"}
         ],
-        "bring": ["午餐和零食", "饮用水（至少1升）", "防水外套（天气变化快）"],
+        "bring": ["午餐和零食", "饮用水（至少1升）"],
         "faq": [
-          {"question": "起点有停车场吗？", "answer": "我们在Cardiff Central火车站集合，不需要自驾。如果你开车，Gwaelod-y-Garth村有免费路边停车。"},
-          {"question": "可以带狗吗？", "answer": "可以，但必须牵绳，因为山坡上有羊群。"},
+          {"question": "我应该穿什么？", "answer": "山顶风大且冷。尽可能穿暖和。合适的分层，手套，帽子，围巾（带上防水衣以防天气快速变化）。抓地力好的运动鞋或登山鞋。雨后路面可能泥泞。"},
+
           {"question": "路陡吗？", "answer": "有些路段较陡，但不需要技术攀登。慢慢走，我们会等大家。"}
         ],
-        "startLabel": "起点：Cardiff Central",
+        "startLat": 51.4816,
+        "startLng": -3.1791,
+        "startLabel": "起点：Mackintosh Sport club",
+        "endLat": 51.5271,
+        "endLng": -3.2519,
         "endLabel": "终点：Garth Mountain山顶",
         "images": [
           "https://placehold.co/600x600/3b82f6/white?text=Garth+1",
@@ -92,7 +99,7 @@
         ],
         "links": [
           {"label": "Garth Mountain (维基百科)", "url": "https://en.wikipedia.org/wiki/Garth_Mountain"},
-          {"label": "Gwaelod y Garth Inn 酒吧", "url": "https://www.gwaelodinn.co.uk/"}
+          {"label": "Roath Market", "url": "http://www.riversidemarket.org.uk/roath-market/"}
         ]
       },
       {
