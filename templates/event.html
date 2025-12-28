@@ -146,13 +146,6 @@
             {{events.bookButton}}
           </a>
         </div>
-
-        <!-- Self-directed Card -->
-        <div id="self-directed-section" class="hidden bg-zinc-100 dark:bg-zinc-800 rounded-2xl p-6">
-          <h3 class="text-sm font-semibold mb-3">{{events.selfDirectedTitle}}</h3>
-          <p id="self-directed-text" class="text-sm text-zinc-600 dark:text-zinc-400"></p>
-          <script id="self-directed-data" type="application/json">"{{trip.selfDirected}}"</script>
-        </div>
       </div>
     </div>
   </main>
@@ -164,6 +157,16 @@
     <button id="modal-close" class="absolute top-4 right-4 text-white hover:text-zinc-300 transition-colors">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <button id="modal-prev" class="absolute left-4 text-white hover:text-zinc-300 transition-colors">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button id="modal-next" class="absolute right-4 text-white hover:text-zinc-300 transition-colors">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       </svg>
     </button>
     <img id="modal-image" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg">
@@ -179,27 +182,11 @@
       if (dateContainer) {
         const dateStr = dateContainer.dataset.date;
         const eventDate = new Date(dateStr + 'T00:00:00');
-        const options = { weekday: 'long', day: 'numeric', month: 'long' };
+        const options = { weekday: 'short', day: 'numeric', month: 'short' };
         const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
         const dateSpan = dateContainer.querySelector('.event-date');
         if (dateSpan) {
           dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
-        }
-      }
-
-      // Render self-directed section
-      const selfDirectedSection = document.getElementById('self-directed-section');
-      const selfDirectedText = document.getElementById('self-directed-text');
-      const selfDirectedDataEl = document.getElementById('self-directed-data');
-      if (selfDirectedSection && selfDirectedText && selfDirectedDataEl) {
-        try {
-          const selfDirected = JSON.parse(selfDirectedDataEl.textContent);
-          if (selfDirected) {
-            selfDirectedSection.classList.remove('hidden');
-            selfDirectedText.textContent = selfDirected;
-          }
-        } catch (e) {
-          console.error('Failed to parse self-directed:', e);
         }
       }
 
@@ -492,6 +479,14 @@
 
     // Close on X button
     modalClose.addEventListener('click', closeModal);
+
+    // Previous/Next buttons
+    document.getElementById('modal-prev').addEventListener('click', function() {
+      showImage(currentIndex - 1);
+    });
+    document.getElementById('modal-next').addEventListener('click', function() {
+      showImage(currentIndex + 1);
+    });
 
     // Close on backdrop click
     modal.addEventListener('click', function(e) {

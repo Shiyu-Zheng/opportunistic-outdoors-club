@@ -174,7 +174,7 @@
         // Format date nicely
         const dateSpan = card.querySelector('.event-date');
         if (dateSpan) {
-          const options = { weekday: 'long', day: 'numeric', month: 'long' };
+          const options = { weekday: 'short', day: 'numeric', month: 'short' };
           const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
           dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
         }

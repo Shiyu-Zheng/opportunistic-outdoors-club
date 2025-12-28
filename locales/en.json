@@ -43,7 +43,6 @@
     "bringTitle": "What to bring",
     "detailsTitle": "Trip Details",
     "ctaText": "Interested? Get in touch to join.",
-    "selfDirectedTitle": "Going solo?",
     "usefulLinksTitle": "Useful Links",
     "tripFaqTitle": "Questions about this trip",
     "labels": {
@@ -89,14 +88,13 @@
           {"question": "How steep is it?", "answer": "Some sections are steep but nothing technical. Take your time and we'll wait for everyone."}
         ],
         "gpxFile": "/gpx/garth-mountain.gpx",
-        "selfDirected": "Want to do this walk on your own? Transport can be a little tricky because there is no direct bus or train to Gwaelod-y-Garth. Your best bet is the train from Cathays to Pontypridd, get off at Taffs Well, then it's about a 10 min walk to the start of the route.",
         "images": [
           "/images/IMG_1208.jpg",
           "/images/IMG_3139.jpg",
           "/images/IMG_7915.jpg",
-          "/images/IMG_7916.jpg",
           "/images/IMG_1740.jpg",
           "/images/IMG_4880.jpg",
+          "/images/IMG_7916.jpg",
           "/images/IMG_7912.jpg"
         ],
         "links": [
