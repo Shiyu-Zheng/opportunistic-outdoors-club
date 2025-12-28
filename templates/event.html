@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/src/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
   {{> theme-init}}
   <script type="module" src="/src/main.js"></script>
 </head>
@@ -63,6 +64,12 @@
           <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">{{trip.description}}</p>
         </section>
 
+        <!-- Map -->
+        <section>
+          <div id="map" class="h-[400px] rounded-2xl bg-zinc-200 dark:bg-zinc-700"></div>
+          <script id="map-data" type="application/json">{"gpxFile":"{{trip.gpxFile}}"}</script>
+        </section>
+
         <!-- Itinerary Timeline -->
         <section id="itinerary-section" class="hidden">
           <h2 class="text-xl font-semibold mb-4">{{events.itineraryTitle}}</h2>
@@ -92,13 +99,6 @@
           </ul>
         </section>
 
-        <!-- Learn More Links -->
-        <section id="links-section" class="hidden">
-          <h2 class="text-xl font-semibold mb-4">{{events.usefulLinksTitle}}</h2>
-          <ul id="links-list" class="space-y-2"></ul>
-          <script id="links-data" type="application/json">{{trip.links}}</script>
-        </section>
-
         <!-- Trip FAQ -->
         <section id="trip-faq-section" class="hidden">
           <h2 class="text-xl font-semibold mb-4">{{events.tripFaqTitle}}</h2>
@@ -106,10 +106,11 @@
           <script id="trip-faq-data" type="application/json">{{trip.faq}}</script>
         </section>
 
-        <!-- Map -->
-        <section>
-          <div id="map" class="h-[400px] rounded-2xl bg-zinc-200 dark:bg-zinc-700"></div>
-          <script id="map-data" type="application/json">{"startLat":{{trip.startLat}},"startLng":{{trip.startLng}},"endLat":{{trip.endLat}},"endLng":{{trip.endLng}},"startLabel":"{{trip.startLabel}}","endLabel":"{{trip.endLabel}}"}</script>
+        <!-- Learn More Links -->
+        <section id="links-section" class="hidden">
+          <h2 class="text-xl font-semibold mb-4">{{events.usefulLinksTitle}}</h2>
+          <ul id="links-list" class="space-y-2"></ul>
+          <script id="links-data" type="application/json">{{trip.links}}</script>
         </section>
       </div>
 
@@ -268,36 +269,55 @@
       if (mapDataEl) {
         try {
           const mapData = JSON.parse(mapDataEl.textContent);
-          const { startLat, startLng, endLat, endLng, startLabel, endLabel } = mapData;
+          const { gpxFile, startLat, startLng, endLat, endLng, startLabel, endLabel } = mapData;
 
-          const centerLat = (startLat + endLat) / 2;
-          const centerLng = (startLng + endLng) / 2;
-
-          const map = L.map('map').setView([centerLat, centerLng], 12);
+          const map = L.map('map');
 
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
           }).addTo(map);
 
-          const startIcon = L.divIcon({
-            className: 'custom-marker',
-            html: '<div style="background-color: #22c55e; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
-            iconSize: [24, 24],
-            iconAnchor: [12, 12]
-          });
+          if (gpxFile) {
+            new L.GPX(gpxFile, {
+              async: true,
+              marker_options: {
+                startIconUrl: null,
+                endIconUrl: null,
+                shadowUrl: null
+              },
+              polyline_options: {
+                color: '#3b82f6',
+                weight: 4,
+                opacity: 0.8
+              }
+            }).on('loaded', function(e) {
+              map.fitBounds(e.target.getBounds(), {padding: [30, 30]});
+            }).addTo(map);
+          } else {
+            const centerLat = (startLat + endLat) / 2;
+            const centerLng = (startLng + endLng) / 2;
+            map.setView([centerLat, centerLng], 12);
 
-          const endIcon = L.divIcon({
-            className: 'custom-marker',
-            html: '<div style="background-color: #3b82f6; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
-            iconSize: [24, 24],
-            iconAnchor: [12, 12]
-          });
+            const startIcon = L.divIcon({
+              className: 'custom-marker',
+              html: '<div style="background-color: #22c55e; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+              iconSize: [24, 24],
+              iconAnchor: [12, 12]
+            });
 
-          L.marker([startLat, startLng], {icon: startIcon}).addTo(map).bindPopup(startLabel);
-          L.marker([endLat, endLng], {icon: endIcon}).addTo(map).bindPopup(endLabel);
+            const endIcon = L.divIcon({
+              className: 'custom-marker',
+              html: '<div style="background-color: #3b82f6; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+              iconSize: [24, 24],
+              iconAnchor: [12, 12]
+            });
 
-          const bounds = L.latLngBounds([[startLat, startLng], [endLat, endLng]]);
-          map.fitBounds(bounds, {padding: [50, 50]});
+            L.marker([startLat, startLng], {icon: startIcon}).addTo(map).bindPopup(startLabel);
+            L.marker([endLat, endLng], {icon: endIcon}).addTo(map).bindPopup(endLabel);
+
+            const bounds = L.latLngBounds([[startLat, startLng], [endLat, endLng]]);
+            map.fitBounds(bounds, {padding: [50, 50]});
+          }
         } catch (e) {
           console.error('Failed to parse map data:', e);
         }
