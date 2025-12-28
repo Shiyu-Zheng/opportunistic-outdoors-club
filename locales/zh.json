@@ -43,6 +43,7 @@
     "bringTitle": "需要携带",
     "detailsTitle": "活动详情",
     "ctaText": "感兴趣？联系我们报名。",
+    "selfDirectedTitle": "自己去？",
     "usefulLinksTitle": "相关链接",
     "tripFaqTitle": "关于此活动的问题",
     "labels": {
@@ -88,6 +89,7 @@
           {"question": "路陡吗？", "answer": "有些路段较陡，但不需要技术攀登。慢慢走，我们会等大家。"}
         ],
         "gpxFile": "/gpx/garth-mountain.gpx",
+        "selfDirected": "想自己去走这条路线？交通可能有点麻烦，因为没有直达Gwaelod-y-Garth的巴士或火车。最好的方式是从Cathays坐火车到Pontypridd，在Taffs Well下车，然后步行约10分钟到路线起点。",
         "images": [
           "/images/IMG_1208.jpg",
           "/images/IMG_3139.jpg",
