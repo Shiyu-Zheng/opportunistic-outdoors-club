@@ -39,6 +39,7 @@
     "spotsLeft": "还剩名额",
     "aboutTitle": "关于这次活动",
     "itineraryTitle": "行程安排",
+    "wearTitle": "穿着建议",
     "bringTitle": "需要携带",
     "detailsTitle": "活动详情",
     "ctaText": "感兴趣？联系我们报名。",
@@ -49,7 +50,7 @@
       "transport": "交通",
       "route": "路线",
       "bring": "携带物品",
-      "footwear": "鞋子",
+      "wear": "穿着建议",
       "notes": "备注",
       "fee": "费用",
       "difficulty": "难度"
@@ -78,10 +79,13 @@
           {"time": "14:00", "description": "可选择在Gwaelod y Garth Inn酒吧停留"},
           {"time": "15:00", "description": "返回Cardiff Central"}
         ],
+        "wear": [
+          "保暖分层，手套，帽子，围巾",
+          "防水外套（天气可能快速变化）",
+          "抓地力好的运动鞋或登山鞋（雨后路面可能泥泞）"
+        ],
         "bring": ["午餐和零食", "饮用水（至少1升）"],
         "faq": [
-          {"question": "我应该穿什么？", "answer": "山顶风大且冷。尽可能穿暖和。合适的分层，手套，帽子，围巾（带上防水衣以防天气快速变化）。抓地力好的运动鞋或登山鞋。雨后路面可能泥泞。"},
-
           {"question": "路陡吗？", "answer": "有些路段较陡，但不需要技术攀登。慢慢走，我们会等大家。"}
         ],
         "startLat": 51.4816,
@@ -112,8 +116,8 @@
         "difficulty": "简单",
         "meeting": "Taffs Well火车站停车场，11点。需要的话可以10:45从Cardiff Central接。",
         "transport": "从Central坐火车15分钟（往返约£4）或可接送。下午3点返回。",
-        "footwear": "运动鞋即可，路况良好",
         "notes": "城堡门票可选（Cadw £8，会员免费）。维多利亚哥特复兴风格，内部值得参观。",
+        "wear": ["运动鞋即可，路况良好"],
         "description": "Fforest Fawr是古老的树林，有大橡树和山毛榉。小路通向Castell Coch城堡，维多利亚哥特式建筑，内部有彩绘装饰，还有可以升降的吊桥。城堡有咖啡馆。",
         "routeDescription": "穿越Fforest Fawr古老树林前往Castell Coch城堡。路况良好。5公里，2小时。",
         "itinerary": [
@@ -150,7 +154,7 @@
         "difficulty": "中等",
         "meeting": "Cardiff Central火车站，出租车站牌处，9点",
         "transport": "车程1小时至Brecon Beacons的Pontneddfechan。返程在Merthyr停留吃饭。下午4:30回卡迪夫。",
-        "footwear": "登山鞋，不要运动鞋",
+        "wear": ["登山鞋，不要运动鞋"],
         "description": "峡谷树林里有四个瀑布。Sgwd Clun-Gwyn最高。Sgwd yr Eira可以走到水帘后面。一路都是长满青苔的岩石和老树。",
         "routeDescription": "四瀑布步道。8公里，3-4小时。岩石路段、陡峭台阶。可走到Sgwd yr Eira瀑布后面。",
         "itinerary": [
@@ -191,7 +195,13 @@
         "difficulty": "中等偏难",
         "meeting": "Cardiff Central火车站，出租车站牌处，8点",
         "transport": "小巴前往Storey Arms停车场（单程50分钟）。下午4:30返回卡迪夫。",
-        "footwear": "有良好脚踝支撑的登山鞋。如有结冰可能需要冰爪。",
+        "wear": [
+          "有良好脚踝支撑的登山鞋",
+          "防水外套和裤子",
+          "保暖层（抓绒、帽子、手套）",
+          "备用保暖衣物",
+          "冰爪（如有，可能结冰）"
+        ],
         "description": "我们乘小巴前往Storey Arms，这是攀登Pen-y-Fan的传统起点。从停车场开始，路径稳步上升，部分路段较陡，山顶海拔886米，是英国南部最高点。晴天可以看到布里斯托尔海峡、黑山山脉，以及远处彭布罗克郡的普雷塞利山。从山顶我们向西前往Corn Du，然后下降至Upper Neuadd水库，沿古老的赶牛道返回。冬季地面可能结冰或泥泞，山顶常有云雾和大风。我们按团队节奏行进，如果条件恶劣会折返。",
         "routeDescription": "环形路线，经过Pen-y-Fan（886米）和Corn Du。11公里，4-5小时。从Storey Arms陡峭攀升，山脊暴露，经水库返回。",
         "itinerary": [
@@ -207,11 +217,7 @@
         ],
         "bring": [
           "午餐和零食（沿途没有补给）",
-          "至少1.5升水",
-          "防水外套和裤子",
-          "保暖层（抓绒、帽子、手套）",
-          "备用保暖衣物",
-          "冰爪（如有，可能结冰）"
+          "至少1.5升水"
         ],
         "faq": [
           {"question": "如果有雪或冰怎么办？", "answer": "我们会当天评估情况。如果路面有明显结冰，冰爪会有帮助。如果不安全，我们会缩短路线或改期。"},

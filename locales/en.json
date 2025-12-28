@@ -39,6 +39,7 @@
     "spotsLeft": "spots left",
     "aboutTitle": "About this trip",
     "itineraryTitle": "Itinerary",
+    "wearTitle": "What to wear",
     "bringTitle": "What to bring",
     "detailsTitle": "Trip Details",
     "ctaText": "Interested? Get in touch to join.",
@@ -49,7 +50,7 @@
       "transport": "Transport",
       "route": "Route",
       "bring": "Bring",
-      "footwear": "Footwear",
+      "wear": "What to wear",
       "notes": "Notes",
       "fee": "Fee",
       "difficulty": "Difficulty"
@@ -78,10 +79,13 @@
           {"time": "14:00", "description": "Optional stop at Gwaelod y Garth Inn"},
           {"time": "15:00", "description": "Return to Cardiff Central"}
         ],
+        "wear": [
+          "Warm layers, gloves, hat, scarf",
+          "Waterproof jacket (weather can change quickly)",
+          "Trainers with good grip or walking shoes (path can be muddy after rain)"
+        ],
         "bring": ["Packed lunch and snacks", "Water (at least 1 litre)"],
         "faq": [
-          {"question": "What should I wear?", "answer": "It is windy and cold on the summit. Dress as warm as possible. Proper layers, gloves, hat, scarf (bring waterproof just in case weather can change quickly). Trainers with good grip or walking shoes. The path can be muddy after rain."},
-
           {"question": "How steep is it?", "answer": "Some sections are steep but nothing technical. Take your time and we'll wait for everyone."}
         ],
         "startLat": 51.4816,
@@ -116,8 +120,8 @@
         "difficulty": "Easy",
         "meeting": "Taffs Well station car park, 11am. Pickup from Cardiff Central at 10:45am if needed.",
         "transport": "Train from Central 15 mins (about £4 return) or pickup available. Back by 3pm.",
-        "footwear": "Trainers fine, paths well maintained",
         "notes": "Castle entry optional (£8 Cadw, members free). Victorian Gothic revival, interiors worth seeing.",
+        "wear": ["Trainers fine, paths are well maintained"],
         "description": "We catch the train to Taffs Well and walk from there through Fforest Fawr, old woodland with big oaks and beech trees. The path climbs at the end to Castell Coch, a Victorian Gothic castle with painted ceilings and a working drawbridge. We have lunch at the castle café, then head back the same way.",
         "routeDescription": "Easy woodland walk through Fforest Fawr to Castell Coch. Well-maintained paths. 5km, 2 hours.",
         "itinerary": [
@@ -162,7 +166,7 @@
         "difficulty": "Moderate",
         "meeting": "Cardiff Central station, by the taxi rank, 9am",
         "transport": "1 hour drive to Pontneddfechan, Brecon Beacons. Pub stop in Merthyr on the way back. In Cardiff by 4:30pm.",
-        "footwear": "Walking boots, not trainers",
+        "wear": ["Walking boots, not trainers"],
         "description": "We drive an hour into the Brecon Beacons and follow the rivers Mellte and Hepste through sandstone gorges, passing four waterfalls. The main one is Sgwd yr Eira ('Waterfall of Snow'). 170 steps down, then we walk behind the 30ft cascade on an old sheep farmers' path. Pub lunch in Merthyr on the way back.",
         "routeDescription": "Four Waterfalls Trail. 8km, 3-4 hours. Rocky sections, steep steps. Walk behind Sgwd yr Eira.",
         "itinerary": [
@@ -211,7 +215,13 @@
         "difficulty": "Moderate-challenging",
         "meeting": "Cardiff Central station, by the taxi rank, 8am",
         "transport": "Mini-bus to Storey Arms car park (50 mins each way). Back in Cardiff by 4:30pm.",
-        "footwear": "Walking boots with good ankle support. Consider microspikes if icy.",
+        "wear": [
+          "Walking boots with good ankle support",
+          "Waterproof jacket and trousers",
+          "Warm layers (fleece, hat, gloves)",
+          "Spare warm layer in case of cold",
+          "Microspikes if you have them (ice possible)"
+        ],
         "description": "We take the mini-bus up to Storey Arms, the traditional starting point for Pen-y-Fan. The path climbs steadily from the car park, steep in places, with the summit at 886m (the highest point in southern Britain). On a clear day you can see the Bristol Channel, the Black Mountains, and across to the Preseli Hills in Pembrokeshire. From the top we head west to Corn Du, then drop down toward the Upper Neuadd Reservoir before looping back along an old drovers' road. In winter the ground can be frozen or boggy, and the summit is often in cloud or wind. We go at the group's pace and turn back if conditions are poor.",
         "routeDescription": "Circular via Pen-y-Fan (886m) and Corn Du. 11km, 4-5 hours. Steep ascent from Storey Arms, exposed summit ridge, reservoir return.",
         "itinerary": [
@@ -227,11 +237,7 @@
         ],
         "bring": [
           "Packed lunch and snacks (nothing available on route)",
-          "At least 1.5 litres of water",
-          "Waterproof jacket and trousers",
-          "Warm layers (fleece, hat, gloves)",
-          "Spare warm layer in case of cold",
-          "Microspikes if you have them (ice possible)"
+          "At least 1.5 litres of water"
         ],
         "faq": [
           {"question": "What if there's snow or ice?", "answer": "We'll assess conditions on the day. If there's significant ice on the path, microspikes help. If it's unsafe, we'll shorten the route or reschedule."},

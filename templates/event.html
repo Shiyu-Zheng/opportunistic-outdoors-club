@@ -70,6 +70,13 @@
           <script id="itinerary-data" type="application/json">{{trip.itinerary}}</script>
         </section>
 
+        <!-- What to Wear -->
+        <section id="wear-section" class="hidden">
+          <h2 class="text-xl font-semibold mb-4">{{events.wearTitle}}</h2>
+          <ul id="wear-list" class="space-y-3 text-zinc-600 dark:text-zinc-400"></ul>
+          <script id="wear-data" type="application/json">{{trip.wear}}</script>
+        </section>
+
         <!-- What to Bring -->
         <section>
           <h2 class="text-xl font-semibold mb-4">{{events.bringTitle}}</h2>
@@ -169,6 +176,29 @@
         const dateSpan = dateContainer.querySelector('.event-date');
         if (dateSpan) {
           dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
+        }
+      }
+
+      // Render wear list
+      const wearSection = document.getElementById('wear-section');
+      const wearList = document.getElementById('wear-list');
+      const wearDataEl = document.getElementById('wear-data');
+      if (wearSection && wearList && wearDataEl) {
+        try {
+          const wear = JSON.parse(wearDataEl.textContent);
+          if (wear && wear.length > 0) {
+            wearSection.classList.remove('hidden');
+            wearList.innerHTML = wear.map(item => `
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                ${item}
+              </li>
+            `).join('');
+          }
+        } catch (e) {
+          console.error('Failed to parse wear:', e);
         }
       }
 
