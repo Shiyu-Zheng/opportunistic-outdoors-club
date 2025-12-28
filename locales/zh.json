@@ -67,16 +67,15 @@
         "fee": "£18",
         "difficulty": "简单到中等",
         "meeting": "Mackintosh Sport club CF24 3JW, 11am",
-        "transport": "车程30分钟至Gwaelod-y-Garth。我们会安排拼车。下午4点返回Cardiff Central。",
-        "description": "从村庄出发，穿过常绿森林，然后到开阔的山坡。根据季节和天气，你会看到牛在吃草，羊在晒太阳，乌鸦在草地上闲逛。别忘了留意脚下的隐藏蘑菇。在山顶，可以全景俯瞰Taffs Well、塔夫河、Cardiff的标志性建筑，以及远处的Somerset。这里有四座已有4000年历史的青铜时代墓葬。我们走另一条路线下山到Gwaelod y Garth Inn，一个19世纪的酒吧，有石板地面和壁炉。用Baileys酒或热可可结束你的一天，享受彼此的陪伴。",
-        "routeDescription": "5公里环形路线。最高点307米，累计爬升257米。",
+        "transport": "车程30分钟至Gwaelod-y-Garth。交通已为你安排好。下午4点返回Cardiff Central。",
+        "description": "从村庄出发，穿过常绿森林，然后到开阔的山坡。根据季节和天气，你会看到牛在吃草，羊在晒太阳，乌鸦在草地上闲逛。留意林地上的蘑菇。山顶有四座已有4000年历史的青铜时代墓葬，可以全景俯瞰Taffs Well、塔夫河、Cardiff的标志性建筑，以及远处的Somerset。我们从北坡下山到Gwaelod y Garth Inn，一个19世纪的酒吧，有石板地面和壁炉。用Baileys酒或热可可结束你的一天，享受彼此的陪伴。",
+        "routeDescription": "5公里环形路线，约250米爬升至307米山顶。",
         "itinerary": [
-          {"time": "11:00", "description": "在Cardiff Sport club集合，强烈建议提前半小时到，因为这里每周也是Roath Market的举办地。有很多本地产品，你可以找到好咖啡和食物带上路"},
-          {"time": "11:10", "description": "开车前往Gwaelod-y-Garth村（30分钟）"},
-          {"time": "11:40", "description": "开始徒步，穿过森林"},
+          {"time": "10:50", "description": "在Mackintosh Sport club集合。建议提前半小时到，因为这里每周也是Roath Market的举办地。有很多本地产品、好咖啡和食物可以带上路。"},
+          {"time": "11:00", "description": "开车前往Gwaelod-y-Garth村（30分钟）"},
+          {"time": "11:30", "description": "开始徒步，穿过松树林"},
           {"time": "13:00", "description": "到达山顶，午餐休息，欣赏风景"},
-          {"time": "13:30", "description": "走另一条路线下山"},
-          {"time": "14:00", "description": "可选择在Gwaelod y Garth Inn酒吧停留"},
+          {"time": "13:30", "description": "从北坡下山到Gwaelod y Garth Inn"},
           {"time": "15:00", "description": "返回Cardiff Central"}
         ],
         "wear": [
