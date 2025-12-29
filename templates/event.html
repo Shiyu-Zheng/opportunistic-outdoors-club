@@ -32,7 +32,7 @@
         <div>
           <h1 class="text-3xl md:text-4xl font-bold mb-3">{{trip.title}}</h1>
           <div class="flex flex-wrap items-center gap-3 text-zinc-600 dark:text-zinc-400">
-            <span class="flex items-center gap-2" data-date="{{trip.date}}">
+            <span class="flex items-center gap-2" data-date="{{trip.date}}" data-recurrence="{{trip.recurrence}}">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
               </svg>
@@ -181,12 +181,32 @@
       const dateContainer = document.querySelector('[data-date]');
       if (dateContainer) {
         const dateStr = dateContainer.dataset.date;
-        const eventDate = new Date(dateStr + 'T00:00:00');
+        const recurrence = dateContainer.dataset.recurrence;
+        const templateDate = new Date(dateStr + 'T00:00:00');
+        let displayDate = templateDate;
+
+        // Calculate next occurrence for monthly recurring events
+        if (recurrence === 'monthly') {
+          const dayOfMonth = templateDate.getDate();
+          const now = new Date();
+          now.setHours(0, 0, 0, 0);
+
+          // Try current month
+          let nextDate = new Date(now.getFullYear(), now.getMonth(), dayOfMonth);
+
+          // If that's in the past, try next month
+          if (nextDate < now) {
+            nextDate = new Date(now.getFullYear(), now.getMonth() + 1, dayOfMonth);
+          }
+
+          displayDate = nextDate;
+        }
+
         const options = { weekday: 'short', day: 'numeric', month: 'short' };
         const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
         const dateSpan = dateContainer.querySelector('.event-date');
         if (dateSpan) {
-          dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
+          dateSpan.textContent = displayDate.toLocaleDateString(locale, options);
         }
       }
 

@@ -70,7 +70,7 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-8">{{events.title}}</h2>
       <div class="grid lg:grid-cols-2 gap-6">
         {{#each events.trips}}
-        <article class="event-card bg-zinc-100 dark:bg-zinc-800 rounded-2xl overflow-hidden flex flex-col" data-date="{{trip.date}}">
+        <article class="event-card bg-zinc-100 dark:bg-zinc-800 rounded-2xl overflow-hidden flex flex-col" data-date="{{trip.date}}" data-recurrence="{{trip.recurrence}}">
           <a href="{{nav.homeLink}}{{trip.slug}}/" class="relative h-[450px] overflow-hidden block">
             <img src="{{trip.images.0}}" alt="{{trip.title}}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
           </a>
@@ -161,14 +161,33 @@
 
       document.querySelectorAll('.event-card').forEach(card => {
         const dateStr = card.dataset.date;
+        const recurrence = card.dataset.recurrence;
         if (!dateStr) return;
 
-        const eventDate = new Date(dateStr + 'T00:00:00');
+        const templateDate = new Date(dateStr + 'T00:00:00');
+        let displayDate = templateDate;
 
-        // Hide past events
-        if (eventDate < today) {
-          card.style.display = 'none';
-          return;
+        // Calculate next occurrence for monthly recurring events
+        if (recurrence === 'monthly') {
+          const dayOfMonth = templateDate.getDate();
+          const now = new Date();
+          now.setHours(0, 0, 0, 0);
+
+          // Try current month
+          let nextDate = new Date(now.getFullYear(), now.getMonth(), dayOfMonth);
+
+          // If that's in the past, try next month
+          if (nextDate < now) {
+            nextDate = new Date(now.getFullYear(), now.getMonth() + 1, dayOfMonth);
+          }
+
+          displayDate = nextDate;
+        } else {
+          // Non-recurring events: hide if past
+          if (displayDate < today) {
+            card.style.display = 'none';
+            return;
+          }
         }
 
         // Format date nicely
@@ -176,7 +195,7 @@
         if (dateSpan) {
           const options = { weekday: 'short', day: 'numeric', month: 'short' };
           const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
-          dateSpan.textContent = eventDate.toLocaleDateString(locale, options);
+          dateSpan.textContent = displayDate.toLocaleDateString(locale, options);
         }
       });
     })();
