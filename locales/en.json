@@ -12,21 +12,21 @@
   },
   "home": {
     "hero": {
-      "headline": "Get outdoors while you're in Cardiff.",
-      "description": "We're a small, friendly group that organises walks and outings for international students and visitors. We sort out the transport, plan the route, and handle the details. You just need to show up."
+      "headline": "Cardiff's multilingual outdoor club",
+      "description": "We take care of everything - routes, transport, all the details. Just show up and have a nice time."
     },
     "features": {
       "feature1": {
-        "title": "Transport Sorted",
-        "description": "We arrange lifts and coordinate travel so you don't need a car or local knowledge."
+        "title": "Expert Guides",
+        "description": "Every trip is led by certified guides who know Wales inside out."
       },
       "feature2": {
         "title": "Small Groups",
-        "description": "Everyone travels together in a few cars."
+        "description": "We keep groups small so everyone gets attention."
       },
       "feature3": {
-        "title": "Professional Photographer",
-        "description": "A photographer comes on every trip. Photos shared same day."
+        "title": "No Language Barriers",
+        "description": "English and Chinese speakers on every trip."
       }
     }
   },

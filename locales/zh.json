@@ -12,21 +12,21 @@
   },
   "home": {
     "hero": {
-      "headline": "在卡迪夫，走出去看看。",
-      "description": "我们是一个小型友好的团体，专门为留学生和访客组织户外徒步活动。交通、路线、细节我们都安排好，你只需要来参加。"
+      "headline": "卡迪夫的多语言户外俱乐部",
+      "description": "我们搞定一切——路线、交通、所有细节。你只需要来开心就好。"
     },
     "features": {
       "feature1": {
-        "title": "交通无忧",
-        "description": "我们安排拼车和交通，不需要你有车或熟悉本地。"
+        "title": "专业向导",
+        "description": "每次活动都有熟悉威尔士的持证向导带队。"
       },
       "feature2": {
         "title": "小团出行",
-        "description": "几辆车，一起出发。"
+        "description": "我们保持小团规模，确保每个人都能得到照顾。"
       },
       "feature3": {
-        "title": "专业摄影师",
-        "description": "每次都有摄影师随行，当天出片。"
+        "title": "没有语言障碍",
+        "description": "每次活动都有中英文向导。"
       }
     }
   },
