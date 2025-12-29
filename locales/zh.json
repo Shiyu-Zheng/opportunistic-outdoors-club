@@ -89,13 +89,13 @@
         ],
         "gpxFile": "/gpx/garth-mountain.gpx",
         "images": [
-          "/images/IMG_1208.jpg",
-          "/images/IMG_3139.jpg",
-          "/images/IMG_7915.jpg",
-          "/images/IMG_1740.jpg",
-          "/images/IMG_4880.jpg",
-          "/images/IMG_7916.jpg",
-          "/images/IMG_7912.jpg"
+          "/images/garth-mountain/IMG_1208.jpg",
+          "/images/garth-mountain/IMG_3139.jpg",
+          "/images/garth-mountain/IMG_7915.jpg",
+          "/images/garth-mountain/IMG_1740.jpg",
+          "/images/garth-mountain/IMG_4880.jpg",
+          "/images/garth-mountain/IMG_7916.jpg",
+          "/images/garth-mountain/IMG_7912.jpg"
         ],
         "links": [
           {"label": "Garth Mountain (维基百科)", "url": "https://en.wikipedia.org/wiki/Garth_Mountain"},
