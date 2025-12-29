@@ -65,7 +65,7 @@
         </section>
 
         <!-- Map -->
-        <section>
+        <section id="map-section" class="hidden">
           <div id="map" class="h-[400px] rounded-2xl bg-zinc-200 dark:bg-zinc-700"></div>
           <script id="map-data" type="application/json">{"gpxFile":"{{trip.gpxFile}}"}</script>
         </section>
@@ -275,19 +275,21 @@
       }
 
       // Render map
+      const mapSection = document.getElementById('map-section');
       const mapDataEl = document.getElementById('map-data');
-      if (mapDataEl) {
+      if (mapSection && mapDataEl) {
         try {
           const mapData = JSON.parse(mapDataEl.textContent);
-          const { gpxFile, startLat, startLng, endLat, endLng, startLabel, endLabel } = mapData;
-
-          const map = L.map('map');
-
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-          }).addTo(map);
+          const { gpxFile } = mapData;
 
           if (gpxFile) {
+            mapSection.classList.remove('hidden');
+            const map = L.map('map');
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
             new L.GPX(gpxFile, {
               async: true,
               marker_options: {
@@ -303,30 +305,6 @@
             }).on('loaded', function(e) {
               map.fitBounds(e.target.getBounds(), {padding: [30, 30]});
             }).addTo(map);
-          } else {
-            const centerLat = (startLat + endLat) / 2;
-            const centerLng = (startLng + endLng) / 2;
-            map.setView([centerLat, centerLng], 12);
-
-            const startIcon = L.divIcon({
-              className: 'custom-marker',
-              html: '<div style="background-color: #22c55e; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
-              iconSize: [24, 24],
-              iconAnchor: [12, 12]
-            });
-
-            const endIcon = L.divIcon({
-              className: 'custom-marker',
-              html: '<div style="background-color: #3b82f6; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
-              iconSize: [24, 24],
-              iconAnchor: [12, 12]
-            });
-
-            L.marker([startLat, startLng], {icon: startIcon}).addTo(map).bindPopup(startLabel);
-            L.marker([endLat, endLng], {icon: endIcon}).addTo(map).bindPopup(endLabel);
-
-            const bounds = L.latLngBounds([[startLat, startLng], [endLat, endLng]]);
-            map.fitBounds(bounds, {padding: [50, 50]});
           }
         } catch (e) {
           console.error('Failed to parse map data:', e);
