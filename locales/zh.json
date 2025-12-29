@@ -103,6 +103,54 @@
         ]
       },
       {
+        "slug": "indoor-bouldering-flashpoint",
+        "title": "社交活动：抱石攀岩",
+        "date": "2026-01-04",
+        "times": "3pm - 4:30pm",
+        "duration": "1.5小时",
+        "spotsFilled": "0",
+        "spotsTotal": "5",
+        "fee": "£18",
+        "difficulty": "零基础",
+        "meeting": "Flashpoint Cardiff, Freemans Parc, 236 Penarth Rd, Cardiff CF11 8EQ, 下午3点",
+        "transport": "可以帮忙安排拼出租车。",
+        "description": "没爬过攀岩？这个入门课程就是为你准备的。1位专业教练教最多5个人，配有中文助教翻译和协助。包含所有装备和攀岩鞋。课程结束后，你会获得2周免费装备租赁和2周免费攀岩练习。小班教学，教练会给每个人充足的指导。",
+        "routeDescription": "Flashpoint Cardiff 1.5小时室内抱石攀岩入门课程。",
+        "itinerary": [
+          {"time": "14:50", "description": "到达Flashpoint填写文件和试鞋"},
+          {"time": "15:00", "description": "课程开始，介绍和安全说明"},
+          {"time": "15:10", "description": "跟专业教练学习基础抱石技巧"},
+          {"time": "16:20", "description": "自由练习时间"},
+          {"time": "16:30", "description": "课程结束"}
+        ],
+        "wear": [
+          "宽松舒适的运动服",
+          "多层穿搭（方便在攀爬和休息时调节体温）",
+          "薄袜子配攀岩鞋"
+        ],
+        "bring": ["水瓶", "小锁（如果想用储物柜，可选）"],
+        "faq": [
+          {"question": "需要攀岩经验吗？", "answer": "不需要。这个课程专为零基础的人设计。"},
+          {"question": "体能不好怎么办？", "answer": "抱石适合所有体能水平。你按自己的节奏攀爬，教练会根据你的能力调整。"},
+          {"question": "有体重限制吗？", "answer": "自动保护系统有限制：最轻10公斤，最重150公斤。"}
+        ],
+        "gpxFile": "",
+        "startLat": 51.462185,
+        "startLng": -3.196694,
+        "endLat": 51.462185,
+        "endLng": -3.196694,
+        "startLabel": "Flashpoint Cardiff",
+        "endLabel": "Flashpoint Cardiff",
+        "images": [
+          "/images/indoor-bouldering-flashpoint/bouldering-3.jpg",
+          "/images/indoor-bouldering-flashpoint/bouldering-1.jpg"
+        ],
+        "links": [
+          {"label": "Flashpoint Cardiff", "url": "https://flashpointcardiff.com/"},
+          {"label": "成人入门课程信息", "url": "https://flashpointcardiff.com/session/adult-intro/"}
+        ]
+      },
+      {
         "slug": "castell-coch",
         "title": "Castell Coch",
         "duration": "半天",

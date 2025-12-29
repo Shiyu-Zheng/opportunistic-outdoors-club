@@ -103,6 +103,54 @@
         ]
       },
       {
+        "slug": "indoor-bouldering-flashpoint",
+        "title": "Social Event: Bouldering",
+        "date": "2026-01-04",
+        "times": "3pm - 4:30pm",
+        "duration": "1.5 hours",
+        "spotsFilled": "0",
+        "spotsTotal": "5",
+        "fee": "£18",
+        "difficulty": "Beginner",
+        "meeting": "Flashpoint Cardiff, Freemans Parc, 236 Penarth Rd, Cardiff CF11 8EQ, 3pm",
+        "transport": "We can arrange shared taxis if people want to travel together.",
+        "description": "Never climbed before? This intro session at Flashpoint is for you. One expert coach teaches the basics of bouldering to a small group of max 5 people, with a Chinese-speaking assistant to help translate and support. All equipment provided including climbing shoes. After the session, you get 2 weeks of free kit hire and 2 weeks of free climbing to keep practicing. Small group means plenty of individual attention.",
+        "routeDescription": "1.5 hour indoor bouldering intro session at Flashpoint Cardiff.",
+        "itinerary": [
+          {"time": "14:50", "description": "Arrive at Flashpoint for paperwork and shoe fitting"},
+          {"time": "15:00", "description": "Session starts. Introduction and safety briefing"},
+          {"time": "15:10", "description": "Learn basic bouldering techniques with expert coaches"},
+          {"time": "16:20", "description": "Free practice time"},
+          {"time": "16:30", "description": "Session ends"}
+        ],
+        "wear": [
+          "Loose, comfortable gym clothes",
+          "Layers (easy to adjust temperature between climbing and resting)",
+          "Thin socks to wear with climbing shoes"
+        ],
+        "bring": ["Water bottle", "Small padlock if you want to use a locker (optional)"],
+        "faq": [
+          {"question": "Do I need any experience?", "answer": "No. This session is specifically for people who have never climbed before."},
+          {"question": "What if I'm not very fit?", "answer": "Bouldering is for all fitness levels. You climb at your own pace and coaches adapt to your ability."},
+          {"question": "Are there weight limits?", "answer": "The autobelay system has limits: minimum 10kg (22 lbs), maximum 150kg (330 lbs)."}
+        ],
+        "gpxFile": "",
+        "startLat": 51.462185,
+        "startLng": -3.196694,
+        "endLat": 51.462185,
+        "endLng": -3.196694,
+        "startLabel": "Flashpoint Cardiff",
+        "endLabel": "Flashpoint Cardiff",
+        "images": [
+          "/images/indoor-bouldering-flashpoint/bouldering-3.jpg",
+          "/images/indoor-bouldering-flashpoint/bouldering-1.jpg"
+        ],
+        "links": [
+          {"label": "Flashpoint Cardiff", "url": "https://flashpointcardiff.com/"},
+          {"label": "Adult Intro Session Info", "url": "https://flashpointcardiff.com/session/adult-intro/"}
+        ]
+      },
+      {
         "slug": "castell-coch",
         "title": "Castell Coch",
         "date": "2026-01-25",
