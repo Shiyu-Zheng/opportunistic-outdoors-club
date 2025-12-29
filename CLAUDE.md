@@ -19,6 +19,16 @@ All development happens inside Docker. Use the bash script:
 
 This builds the Docker image and starts the dev server at http://localhost:5173
 
+## Git Configuration (For Claude Code)
+
+On this macOS system, always use the GitHub Desktop git binary instead of the system git when running git commands:
+
+```bash
+/Applications/GitHub Desktop.app/Contents/Resources/app/git/bin/git
+```
+
+Use this full path in place of `git` for all git operations (status, commit, push, etc.).
+
 ## Key Commands
 
 ```bash
