@@ -159,6 +159,8 @@
       const today = new Date();
       today.setHours(0, 0, 0, 0);
 
+      const cardsData = [];
+
       document.querySelectorAll('.event-card').forEach(card => {
         const dateStr = card.dataset.date;
         const recurrence = card.dataset.recurrence;
@@ -197,7 +199,24 @@
           const locale = lang === 'zh' ? 'zh-CN' : 'en-GB';
           dateSpan.textContent = displayDate.toLocaleDateString(locale, options);
         }
+
+        // Store card with its display date for sorting
+        cardsData.push({
+          element: card,
+          date: displayDate
+        });
       });
+
+      // Sort cards by date
+      cardsData.sort((a, b) => a.date - b.date);
+
+      // Reorder DOM elements
+      const container = document.querySelector('.grid.lg\\:grid-cols-2');
+      if (container && cardsData.length > 0) {
+        cardsData.forEach(item => {
+          container.appendChild(item.element);
+        });
+      }
     })();
 
     // Desktop FAQ: render from JSON data
