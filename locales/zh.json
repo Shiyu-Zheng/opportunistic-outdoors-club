@@ -293,6 +293,60 @@
           {"label": "Pen-y-Fan (维基百科)", "url": "https://en.wikipedia.org/wiki/Pen_y_Fan"},
           {"label": "布雷肯比肯斯国家公园", "url": "https://www.breconbeacons.org/"}
         ]
+      },
+      {
+        "slug": "rest-bay-surf-lesson",
+        "title": "Porthcawl冲浪",
+        "date": "2026-02-01",
+        "recurrence": "monthly",
+        "times": "中午12点 - 下午6点",
+        "duration": "半天",
+        "spotsFilled": "2",
+        "spotsTotal": "5",
+        "fee": "£48",
+        "difficulty": "初学者",
+        "meeting": "Mackintosh Sport club CF24 3JW, 中午12点",
+        "transport": "40分钟车程至Porthcawl的Rest Bay。为你安排交通。下午6点返回卡迪夫。",
+        "description": "我们在Rest Bay集合，这是Porthcawl附近的一个沙滩，全年都有稳定的海浪。这是一个2小时的初学者课程，包含所有装备。我们先在沙滩上学习如何站起来，然后进入水中练习抓白浪。课程结束时，大多数人至少能站起来一次。冲完浪后我们在冲浪中心冲洗和换衣服，然后上楼去酒吧。他们的食物不错，阳台可以俯瞰海滩。我们通常会在布里斯托尔海峡的日落中喝一杯结束这一天。",
+        "routeDescription": "Rest Bay Beach的2小时初学者冲浪课程，Porthcawl。提供所有装备和指导。",
+        "itinerary": [
+          {"time": "11:50", "description": "在Mackintosh Sport club集合"},
+          {"time": "12:00", "description": "驱车前往Porthcawl的Rest Bay Beach（40分钟）"},
+          {"time": "12:40", "description": "到达Watersport Centre，试穿潜水服和冲浪板"},
+          {"time": "13:30", "description": "课程开始。安全说明和沙滩练习"},
+          {"time": "14:00", "description": "进入水中，练习抓浪"},
+          {"time": "15:30", "description": "课程结束，归还装备并更衣"},
+          {"time": "18:00", "description": "返回卡迪夫"}
+        ],
+        "wear": [
+          "泳衣（穿在衣服里面）",
+          "出水后穿的保暖衣物（上岸后会很冷）",
+          "换衣服用的拖鞋或凉鞋"
+        ],
+        "bring": ["毛巾", "水瓶", "车上吃的零食"],
+        "faq": [
+          {"question": "需要有经验吗？", "answer": "不需要。这是初学者课程。大多数人之前从未冲过浪。"},
+          {"question": "如果不会游泳怎么办？", "answer": "你应该能在齐腰深的水中感到舒适。潜水服有浮力，教练会在附近。如果你游泳不好，报名时请告诉我们。"},
+          {"question": "一定能站起来吗？", "answer": "大多数人在2小时内至少能在板上站起来一次。有些人第一个浪就成功了，其他人需要更长时间。教练会根据你的节奏调整。"},
+          {"question": "如果浪太大或太小怎么办？", "answer": "Rest Bay在大多数条件下都能冲浪。如果真的无法冲浪，我们会改期或退款。"}
+        ],
+        "startLat": 51.4777,
+        "startLng": -3.7015,
+        "startLabel": "Rest Bay Beach",
+        "endLat": 51.4777,
+        "endLng": -3.7015,
+        "endLabel": "Rest Bay Beach",
+        "gpxFile": "",
+        "images": [
+          "/images/rest-bay-surf/surf-4.jpg",
+          "/images/rest-bay-surf/surf-3.jpg",
+          "/images/rest-bay-surf/surf-2.jpg",
+          "/images/rest-bay-surf/surf-1.jpg"
+        ],
+        "links": [
+          {"label": "Rest Bay水上运动中心", "url": "https://www.pjssurf.co.uk/"},
+          {"label": "Rest Bay海滩信息", "url": "https://www.visitwales.com/things-do/adventure-and-activities/surfing/rest-bay"}
+        ]
       }
     ]
   },

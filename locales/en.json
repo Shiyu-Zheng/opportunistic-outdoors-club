@@ -311,6 +311,60 @@
           {"label": "Pen-y-Fan on Wikipedia", "url": "https://en.wikipedia.org/wiki/Pen_y_Fan"},
           {"label": "Brecon Beacons National Park", "url": "https://www.breconbeacons.org/"}
         ]
+      },
+      {
+        "slug": "rest-bay-surf-lesson",
+        "title": "Porthcawl Surfing",
+        "date": "2026-02-01",
+        "recurrence": "monthly",
+        "times": "12pm - 6pm",
+        "duration": "Half day",
+        "spotsFilled": "2",
+        "spotsTotal": "5",
+        "fee": "£48",
+        "difficulty": "Beginner",
+        "meeting": "Mackintosh Sport club CF24 3JW, 12pm",
+        "transport": "40 minute drive to Rest Bay, Porthcawl. Transport is arranged for you. Return to Cardiff by 6pm.",
+        "description": "We meet at Rest Bay, a sandy beach near Porthcawl that gets consistent swells year-round. This is a 2 hour beginner lesson with all equipment included. We start on the sand learning how to pop up, then head into the water to practice catching whitewater waves. By the end of the session most people manage to stand up at least once. After we rinse off at the surf centre and change, we head upstairs to the bar. They do good food and the balcony overlooks the beach. We usually finish with a drink watching the sunset over the Bristol Channel.",
+        "routeDescription": "2 hour beginner surf lesson at Rest Bay Beach, Porthcawl. All equipment and instruction provided.",
+        "itinerary": [
+          {"time": "11:50", "description": "Meet at Mackintosh Sport club"},
+          {"time": "12:00", "description": "Drive to Rest Bay Beach, Porthcawl (40 mins)"},
+          {"time": "12:40", "description": "Arrive at the Watersport Centre, wetsuit and board fitting"},
+          {"time": "13:30", "description": "Session starts. Safety briefing and beach practice"},
+          {"time": "14:00", "description": "Move into the water, practice catching waves"},
+          {"time": "15:30", "description": "Session ends, return boards and change"},
+          {"time": "18:00", "description": "Return to Cardiff"}
+        ],
+        "wear": [
+          "Swimwear (wear under your clothes)",
+          "Warm clothes for after (you'll be cold when you get out)",
+          "Flip flops or sandals for changing"
+        ],
+        "bring": ["Towel", "Water bottle", "Snacks for the car"],
+        "faq": [
+          {"question": "Do I need any experience?", "answer": "No. This is a beginner lesson. Most people have never surfed before."},
+          {"question": "What if I can't swim?", "answer": "You should be comfortable in waist-deep water. Wetsuits are buoyant and instructors stay close. Let us know when you book if you're a weak swimmer."},
+          {"question": "Will I definitely stand up?", "answer": "Most people manage to stand on the board at least once during the 2 hours. Some get it on their first wave, others take longer. The coaches adapt to your pace."},
+          {"question": "What if the waves are too big or too small?", "answer": "Rest Bay works in most conditions. If it's genuinely unsurfable, we'll reschedule or refund."}
+        ],
+        "startLat": 51.4777,
+        "startLng": -3.7015,
+        "startLabel": "Rest Bay Beach",
+        "endLat": 51.4777,
+        "endLng": -3.7015,
+        "endLabel": "Rest Bay Beach",
+        "gpxFile": "",
+        "images": [
+          "/images/rest-bay-surf/surf-4.jpg",
+          "/images/rest-bay-surf/surf-3.jpg",
+          "/images/rest-bay-surf/surf-2.jpg",
+          "/images/rest-bay-surf/surf-1.jpg"
+        ],
+        "links": [
+          {"label": "Rest Bay Watersport Centre", "url": "https://www.pjssurf.co.uk/"},
+          {"label": "Rest Bay Beach info", "url": "https://www.visitwales.com/things-do/adventure-and-activities/surfing/rest-bay"}
+        ]
       }
     ]
   },
